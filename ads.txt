@@ -1,0 +1,1 @@
+google.com, pub-INSERT_YOUR_PUB_ID_HERE, DIRECT, f08c47fec0942fa0

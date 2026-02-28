@@ -1,0 +1,17 @@
+{
+  "name": "hj-trending-site-builder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static markdown-to-html build pipeline for HJ Trending",
+  "scripts": {
+    "build": "node scripts/build.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "gray-matter": "^4.0.3",
+    "marked": "^15.0.7"
+  }
+}

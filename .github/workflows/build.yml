@@ -1,0 +1,51 @@
+name: Build Markdown Posts
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "posts/**/*.md"
+      - "content/**/*.md"
+      - "scripts/build.js"
+      - "blog-post.html"
+      - "package.json"
+      - ".github/workflows/build.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run build
+        env:
+          SITE_URL: https://hjtrending.com
+          HOME_LATEST_LIMIT: "6"
+        run: npm run build
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add posts/*.html index.html blog.html news.html sports.html gaming.html entertainment.html trending.html fifa2026.html sitemap.xml ads.txt
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: auto-build markdown posts"
+            git push
+          fi
