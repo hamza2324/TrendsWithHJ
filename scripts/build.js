@@ -78,12 +78,15 @@ function loadPosts() {
     const description = String(fm.description || buildExcerpt(parsed.content, 155));
     const thumbnail = String(fm.thumbnail || "/assets/images/default-thumb.jpg");
     const author = String(fm.author || "HJ Trending");
-    const tags = Array.isArray(fm.tags)
-      ? fm.tags.map((t) => String(t)).filter(Boolean)
-      : String(fm.tags || "")
-          .split(",")
-          .map((t) => t.trim())
-          .filter(Boolean);
+    let tags = [];
+    if (Array.isArray(fm.tags)) {
+      tags = fm.tags.map((t) => String(t)).filter(Boolean);
+    } else if (fm.tags) {
+      tags = String(fm.tags)
+        .split(",")
+        .map((t) => t.trim())
+        .filter(Boolean);
+    }
     const htmlContent = marked.parse(parsed.content || "");
     const readingMinutes = estimateReadMinutes(parsed.content || "");
 
@@ -118,6 +121,10 @@ function buildPostPage(post, allPosts, templateHtml) {
   const pageTitle = `${post.title} | HJ Trending`;
   $("title").text(pageTitle);
   setMetaByName($, "description", post.description);
+  // add keywords meta from tags for extra SEO value
+  if (post.tags && post.tags.length) {
+    setMetaByName($, "keywords", post.tags.join(", "));
+  }
   setMetaByName($, "robots", "index, follow");
   setMetaByProperty($, "og:title", post.title);
   setMetaByProperty($, "og:description", post.description);
@@ -130,6 +137,29 @@ function buildPostPage(post, allPosts, templateHtml) {
   setMetaByName($, "twitter:image", toAbsoluteUrl(post.thumbnail));
   setCanonical($, post.url);
   setArticleSchemas($, post);
+
+  // ---- hero image ---------------------------------------------------
+  const heroEl = $(".article-hero").first();
+  if (heroEl.length) {
+    heroEl.empty();
+    const thumbPath = post.thumbnail || "";
+    // convert to path usable from posts/ folder
+    const imgSrc = /^https?:/.test(thumbPath)
+      ? thumbPath
+      : thumbPath.startsWith("/")
+      ? thumbPath.slice(1)
+      : `../${thumbPath}`;
+    heroEl.append(`<img src="${imgSrc}" alt="${escapeHtml(post.title)}">`);
+  }
+  if (post.thumbnailCaption) {
+    $(".article-hero__caption").text(post.thumbnailCaption);
+  } else {
+    $(".article-hero__caption").remove();
+  }
+
+  // remove the generic "more from" section so first/solo posts
+  // don't link out to placeholder content (GTA, etc.)
+  $(".dark-band").remove();
 
   $(".breadcrumb a").first().attr("href", "../index.html");
   $(".breadcrumb a").eq(1).attr("href", `../${post.category.page}`).text(post.category.label);
@@ -331,8 +361,22 @@ function ensureNewsPage() {
 
 function renderGridCard(post, opts = {}) {
   const dataAttr = opts.includeDataCat ? ` data-cat="${post.category.dataCat}"` : "";
+  const thumb = post.thumbnail ? post.thumbnail : "";
+  let imgHtml = "";
+  if (thumb) {
+    // resolve relative path (same logic used earlier in hero)
+    const imgSrc = /^https?:/.test(thumb)
+      ? thumb
+      : thumb.startsWith("/")
+      ? thumb.slice(1)
+      : `../${thumb}`;
+    imgHtml = `<img src="${imgSrc}" alt="${escapeHtml(post.title)}">`;
+  } else {
+    imgHtml = `<div class="ph"><span>${escapeHtml(post.category.label)}</span></div>`;
+  }
+  const imgClass = thumb ? "" : `ph ${placeholderClass(post.slug)}`;
   return `<article class="card" data-generated="md" data-slug="${post.slug}"${dataAttr}>
-  <a href="posts/${post.slug}.html" class="card__img ph ${placeholderClass(post.slug)}"><div class="ph"><span>${escapeHtml(post.category.label)}</span></div></a>
+  <a href="posts/${post.slug}.html" class="card__img ${imgClass}">${imgHtml}</a>
   <div class="card__body">
     <div class="card__cat ${post.category.className}">${post.category.emoji} ${escapeHtml(post.category.label)}</div>
     <h2 class="card__title"><a href="posts/${post.slug}.html">${escapeHtml(post.title)}</a></h2>
@@ -344,8 +388,22 @@ function renderGridCard(post, opts = {}) {
 
 function renderListRow(post, opts = {}) {
   const dataAttr = opts.includeDataCat ? ` data-cat="${post.category.dataCat}"` : "";
+  const thumb = post.thumbnail ? post.thumbnail : "";
+  let imgHtml = "";
+  if (thumb) {
+    const imgSrc = /^https?:/.test(thumb)
+      ? thumb
+      : thumb.startsWith("/")
+      ? thumb.slice(1)
+      : `../${thumb}`;
+    imgHtml = `<img src="${imgSrc}" alt="${escapeHtml(post.title)}">`;
+  } else {
+    imgHtml = `<div class="ph"><span>${escapeHtml(post.category.label)}</span></div>`;
+  }
+  const imgClass = thumb ? "" : `ph ${placeholderClass(post.slug)}`;
+
   return `<article class="card-row" data-generated="md" data-slug="${post.slug}"${dataAttr}>
-  <a href="posts/${post.slug}.html" class="card-row__img ph ${placeholderClass(post.slug)}"><div class="ph"><span>${escapeHtml(post.category.label)}</span></div></a>
+  <a href="posts/${post.slug}.html" class="card-row__img ${imgClass}">${imgHtml}</a>
   <div>
     <div class="card-row__cat ${post.category.className}">${post.category.emoji} ${escapeHtml(post.category.label)}</div>
     <h3 class="card-row__title"><a href="posts/${post.slug}.html">${escapeHtml(post.title)}</a></h3>
@@ -355,8 +413,22 @@ function renderListRow(post, opts = {}) {
 }
 
 function renderSideStory(post) {
+  const thumb = post.thumbnail ? post.thumbnail : "";
+  let imgHtml = "";
+  if (thumb) {
+    const imgSrc = /^https?:/.test(thumb)
+      ? thumb
+      : thumb.startsWith("/")
+      ? thumb.slice(1)
+      : `../${thumb}`;
+    imgHtml = `<img src="${imgSrc}" alt="${escapeHtml(post.title)}">`;
+  } else {
+    imgHtml = `<div class="ph"><span>${escapeHtml(post.category.label)}</span></div>`;
+  }
+  const imgClass = thumb ? "" : `ph ${placeholderClass(post.slug)}`;
+
   return `<article class="side-story" data-generated="md" data-slug="${post.slug}">
-  <a href="posts/${post.slug}.html" class="side-story__img ph ${placeholderClass(post.slug)}"><div class="ph"><span>${escapeHtml(post.category.label)}</span></div></a>
+  <a href="posts/${post.slug}.html" class="side-story__img ${imgClass}">${imgHtml}</a>
   <div>
     <div class="side-story__cat">${escapeHtml(post.category.label)}</div>
     <a href="posts/${post.slug}.html" class="side-story__title">${escapeHtml(post.title)}</a>
