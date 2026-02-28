@@ -16,6 +16,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: build-and-deploy
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -38,14 +42,25 @@ jobs:
           HOME_LATEST_LIMIT: "6"
         run: npm run build
 
-      - name: Commit generated files
+      - name: Commit and push generated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add posts/*.html index.html blog.html news.html sports.html gaming.html entertainment.html trending.html fifa2026.html sitemap.xml ads.txt
+          git add posts/*.html index.html blog.html news.html sports.html gaming.html entertainment.html trending.html fifa2026.html sitemap.xml ads.txt 2>/dev/null || true
+          
           if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "chore: auto-build markdown posts"
-            git push
+            echo "✓ No changes to commit - build output unchanged"
+            exit 0
           fi
+          
+          echo "✓ Detected changes in build output - committing..."
+          git commit -m "chore: auto-build markdown posts [skip ci]"
+          
+          if ! git push; then
+            echo "⚠ Push failed - this may be due to concurrent workflows. Retrying..."
+            git pull --rebase
+            git push || echo "⚠ Push failed after retry - concurrent workflow in progress"
+            exit 0
+          fi
+          
+          echo "✓ Successfully pushed generated files"
