@@ -300,6 +300,10 @@ footer { background: var(--black); color: var(--white); border-top: 4px solid va
 .article-body img { width: 100%; height: auto; max-width: 100%; border: 1px solid var(--grey-200); margin: 32px 0; border-radius: 4px; }
 .article-body code { font-family: 'Space Mono', monospace; font-size: 13px; background: var(--grey-100); border: 1px solid var(--grey-200); padding: 2px 6px; color: var(--red); }
 .article-body hr { border: none; border-top: 2px solid var(--grey-200); margin: 40px 0; }
+.article-body table { width: 100%; border-collapse: collapse; margin: 18px 0 26px; font-size: 15px; line-height: 1.55; border: 1px solid var(--grey-300); }
+.article-body thead th { background: var(--grey-100); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.article-body th, .article-body td { border: 1px solid var(--grey-300); padding: 10px 12px; text-align: left; vertical-align: top; }
+.article-body tbody tr:nth-child(even) { background: #fafafa; }
 
 .article-footer { max-width: 720px; margin: 0 auto; padding: 0 20px 48px; }
 .article-tags { margin-bottom: 32px; }
