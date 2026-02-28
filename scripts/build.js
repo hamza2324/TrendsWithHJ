@@ -364,12 +364,14 @@ function renderGridCard(post, opts = {}) {
   const thumb = post.thumbnail ? post.thumbnail : "";
   let imgHtml = "";
   if (thumb) {
-    // resolve relative path (same logic used earlier in hero)
+    // resolve relative path for cards/list/side stories; these pages live at the
+    // site root, so we don't need to climb out of any subfolder. only posts
+    // themselves require a `../` prefix (handled separately in buildPostPage).
     const imgSrc = /^https?:/.test(thumb)
       ? thumb
       : thumb.startsWith("/")
       ? thumb.slice(1)
-      : `../${thumb}`;
+      : thumb; // leave as-is (e.g. "images/foo.jpg")
     imgHtml = `<img src="${imgSrc}" alt="${escapeHtml(post.title)}">`;
   } else {
     imgHtml = `<div class="ph"><span>${escapeHtml(post.category.label)}</span></div>`;
@@ -395,7 +397,7 @@ function renderListRow(post, opts = {}) {
       ? thumb
       : thumb.startsWith("/")
       ? thumb.slice(1)
-      : `../${thumb}`;
+      : thumb;
     imgHtml = `<img src="${imgSrc}" alt="${escapeHtml(post.title)}">`;
   } else {
     imgHtml = `<div class="ph"><span>${escapeHtml(post.category.label)}</span></div>`;
@@ -420,7 +422,7 @@ function renderSideStory(post) {
       ? thumb
       : thumb.startsWith("/")
       ? thumb.slice(1)
-      : `../${thumb}`;
+      : thumb;
     imgHtml = `<img src="${imgSrc}" alt="${escapeHtml(post.title)}">`;
   } else {
     imgHtml = `<div class="ph"><span>${escapeHtml(post.category.label)}</span></div>`;
