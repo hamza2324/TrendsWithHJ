@@ -17,12 +17,12 @@ const CATEGORY_LIMIT = Number(process.env.CATEGORY_LIMIT || 12);
 const BLOG_LIMIT = Number(process.env.BLOG_LIMIT || 18);
 
 const CATEGORY_MAP = {
-  sports: { key: "sports", label: "Sports", emoji: "⚽", page: "sports.html", className: "cat-sports", dataCat: "sports" },
-  gaming: { key: "gaming", label: "Gaming", emoji: "🎮", page: "gaming.html", className: "cat-gaming", dataCat: "gaming" },
-  entertainment: { key: "entertainment", label: "Entertainment", emoji: "🎬", page: "entertainment.html", className: "cat-entertainment", dataCat: "entertainment" },
-  trending: { key: "trending", label: "Trending", emoji: "🔥", page: "trending.html", className: "cat-trending", dataCat: "trending" },
-  fifa2026: { key: "fifa2026", label: "FIFA 2026", emoji: "🏆", page: "fifa2026.html", className: "cat-fifa", dataCat: "fifa" },
-  news: { key: "news", label: "News", emoji: "📰", page: "news.html", className: "cat-trending", dataCat: "news" }
+  sports: { key: "sports", label: "Sports", emoji: "", page: "sports.html", className: "cat-sports", dataCat: "sports" },
+  gaming: { key: "gaming", label: "Gaming", emoji: "", page: "gaming.html", className: "cat-gaming", dataCat: "gaming" },
+  entertainment: { key: "entertainment", label: "Entertainment", emoji: "", page: "entertainment.html", className: "cat-entertainment", dataCat: "entertainment" },
+  trending: { key: "trending", label: "Trending", emoji: "", page: "trending.html", className: "cat-trending", dataCat: "trending" },
+  fifa2026: { key: "fifa2026", label: "FIFA 2026", emoji: "", page: "fifa2026.html", className: "cat-fifa", dataCat: "fifa" },
+  news: { key: "news", label: "News", emoji: "", page: "news.html", className: "cat-trending", dataCat: "news" }
 };
 
 marked.setOptions({ gfm: true, breaks: false });
@@ -329,13 +329,13 @@ function ensureBlogPage() {
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="nav-wrap"><nav class="nav"><a href="index.html" class="nav__logo">HJ<span>·</span>TRENDING</a><ul class="nav__links"><li><a href="index.html">Home</a></li><li><a href="blog.html" class="active">Blog</a></li><li><a href="news.html">News</a></li><li><a href="sports.html">Sports</a></li><li><a href="gaming.html">Gaming</a></li></ul><div class="nav__right"><button class="nav__search-btn" id="searchBtn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><button class="nav__burger" id="burgerBtn" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></nav></div>
-<div class="cat-bar" role="navigation" aria-label="Filter by category"><div class="cat-bar__inner"><button class="cat-btn active" onclick="filterCat(this,'all')">All</button><button class="cat-btn" onclick="filterCat(this,'news')">📰 News</button><button class="cat-btn" onclick="filterCat(this,'sports')">⚽ Sports</button><button class="cat-btn" onclick="filterCat(this,'gaming')">🎮 Gaming</button><button class="cat-btn" onclick="filterCat(this,'entertainment')">🎬 Entertainment</button><button class="cat-btn" onclick="filterCat(this,'trending')">🔥 Trending</button><button class="cat-btn" onclick="filterCat(this,'fifa')">🏆 FIFA 2026</button></div></div>
+<div class="nav-wrap"><nav class="nav"><a href="index.html" class="nav__logo">HJ<span></span>TRENDING</a><ul class="nav__links"><li><a href="index.html">Home</a></li><li><a href="blog.html" class="active">Blog</a></li><li><a href="news.html">News</a></li><li><a href="sports.html">Sports</a></li><li><a href="gaming.html">Gaming</a></li></ul><div class="nav__right"><button class="nav__search-btn" id="searchBtn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><button class="nav__burger" id="burgerBtn" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></nav></div>
+<div class="cat-bar" role="navigation" aria-label="Filter by category"><div class="cat-bar__inner"><button class="cat-btn active" onclick="filterCat(this,'all')">All</button><button class="cat-btn" onclick="filterCat(this,'news')"> News</button><button class="cat-btn" onclick="filterCat(this,'sports')"> Sports</button><button class="cat-btn" onclick="filterCat(this,'gaming')"> Gaming</button><button class="cat-btn" onclick="filterCat(this,'entertainment')"> Entertainment</button><button class="cat-btn" onclick="filterCat(this,'trending')"> Trending</button><button class="cat-btn" onclick="filterCat(this,'fifa')"> FIFA 2026</button></div></div>
 <div class="main-layout"><main class="feed"><div class="sec-label">Latest Articles</div><div class="card-grid"></div><div class="sec-label">More Stories</div><div class="card-list" id="moreStories"></div></main></div>
-<footer><div class="footer-top"><div><div class="footer-logo">HJ<span>·</span>TRENDING</div></div><div class="footer-col"><div class="footer-col__title">Legal</div><ul><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-of-service.html">Terms of Service</a></li><li><a href="cookie-policy.html">Cookie Policy</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul></div></div></footer>
-<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
-<div class="search-overlay" id="searchOverlay" role="dialog"><div class="search-box"><div class="search-input-wrap"><input type="text" id="searchInput" placeholder="Search stories..."><button class="search-close" id="searchClose">✕</button></div></div></div>
-<div class="mobile-menu" id="mobileMenu" role="dialog"><div class="mobile-menu__header"><span class="mobile-menu__logo">HJ<span>·</span>TRENDING</span><button class="mobile-menu__close" id="mobileClose">✕</button></div><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="news.html">News</a><a href="sports.html">Sports</a><a href="gaming.html">Gaming</a></div>
+<footer><div class="footer-top"><div><div class="footer-logo">HJ<span></span>TRENDING</div></div><div class="footer-col"><div class="footer-col__title">Legal</div><ul><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-of-service.html">Terms of Service</a></li><li><a href="cookie-policy.html">Cookie Policy</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul></div></div></footer>
+<button class="back-top" id="backTop" aria-label="Back to top"></button>
+<div class="search-overlay" id="searchOverlay" role="dialog"><div class="search-box"><div class="search-input-wrap"><input type="text" id="searchInput" placeholder="Search stories..."><button class="search-close" id="searchClose"></button></div></div></div>
+<div class="mobile-menu" id="mobileMenu" role="dialog"><div class="mobile-menu__header"><span class="mobile-menu__logo">HJ<span></span>TRENDING</span><button class="mobile-menu__close" id="mobileClose"></button></div><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="news.html">News</a><a href="sports.html">Sports</a><a href="gaming.html">Gaming</a></div>
 <script src="main.js"></script>
 </body>
 </html>
@@ -360,12 +360,12 @@ function ensureNewsPage() {
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="nav-wrap"><nav class="nav"><a href="index.html" class="nav__logo">HJ<span>·</span>TRENDING</a><ul class="nav__links"><li><a href="index.html">Home</a></li><li><a href="news.html" class="active">News</a></li><li><a href="blog.html">Blog</a></li><li><a href="sports.html">Sports</a></li><li><a href="gaming.html">Gaming</a></li></ul><div class="nav__right"><button class="nav__search-btn" id="searchBtn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><button class="nav__burger" id="burgerBtn" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></nav></div>
-<div class="main-layout"><main class="feed"><div class="sec-label">📰 Latest News</div><div class="card-grid"></div></main></div>
-<footer><div class="footer-top"><div><div class="footer-logo">HJ<span>·</span>TRENDING</div></div><div class="footer-col"><div class="footer-col__title">Legal</div><ul><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-of-service.html">Terms of Service</a></li><li><a href="cookie-policy.html">Cookie Policy</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul></div></div></footer>
-<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
-<div class="search-overlay" id="searchOverlay" role="dialog"><div class="search-box"><div class="search-input-wrap"><input type="text" id="searchInput" placeholder="Search stories..."><button class="search-close" id="searchClose">✕</button></div></div></div>
-<div class="mobile-menu" id="mobileMenu" role="dialog"><div class="mobile-menu__header"><span class="mobile-menu__logo">HJ<span>·</span>TRENDING</span><button class="mobile-menu__close" id="mobileClose">✕</button></div><a href="index.html">Home</a><a href="news.html">News</a><a href="blog.html">Blog</a><a href="sports.html">Sports</a><a href="gaming.html">Gaming</a></div>
+<div class="nav-wrap"><nav class="nav"><a href="index.html" class="nav__logo">HJ<span></span>TRENDING</a><ul class="nav__links"><li><a href="index.html">Home</a></li><li><a href="news.html" class="active">News</a></li><li><a href="blog.html">Blog</a></li><li><a href="sports.html">Sports</a></li><li><a href="gaming.html">Gaming</a></li></ul><div class="nav__right"><button class="nav__search-btn" id="searchBtn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><button class="nav__burger" id="burgerBtn" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></nav></div>
+<div class="main-layout"><main class="feed"><div class="sec-label"> Latest News</div><div class="card-grid"></div></main></div>
+<footer><div class="footer-top"><div><div class="footer-logo">HJ<span></span>TRENDING</div></div><div class="footer-col"><div class="footer-col__title">Legal</div><ul><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-of-service.html">Terms of Service</a></li><li><a href="cookie-policy.html">Cookie Policy</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul></div></div></footer>
+<button class="back-top" id="backTop" aria-label="Back to top"></button>
+<div class="search-overlay" id="searchOverlay" role="dialog"><div class="search-box"><div class="search-input-wrap"><input type="text" id="searchInput" placeholder="Search stories..."><button class="search-close" id="searchClose"></button></div></div></div>
+<div class="mobile-menu" id="mobileMenu" role="dialog"><div class="mobile-menu__header"><span class="mobile-menu__logo">HJ<span></span>TRENDING</span><button class="mobile-menu__close" id="mobileClose"></button></div><a href="index.html">Home</a><a href="news.html">News</a><a href="blog.html">Blog</a><a href="sports.html">Sports</a><a href="gaming.html">Gaming</a></div>
 <script src="main.js"></script>
 </body>
 </html>
@@ -423,7 +423,7 @@ function renderListRow(post, opts = {}) {
   <div>
     <div class="card-row__cat ${post.category.className}">${post.category.emoji} ${escapeHtml(post.category.label)}</div>
     <h3 class="card-row__title"><a href="posts/${post.slug}.html">${escapeHtml(post.title)}</a></h3>
-    <div class="card-row__meta">${escapeHtml(post.author)} · ${escapeHtml(post.humanDate)} · ${post.readingMinutes} min read</div>
+    <div class="card-row__meta">${escapeHtml(post.author)}  ${escapeHtml(post.humanDate)}  ${post.readingMinutes} min read</div>
   </div>
 </article>`;
 }
@@ -448,7 +448,7 @@ function renderSideStory(post) {
   <div>
     <div class="side-story__cat">${escapeHtml(post.category.label)}</div>
     <a href="posts/${post.slug}.html" class="side-story__title">${escapeHtml(post.title)}</a>
-    <div class="side-story__meta">${escapeHtml(post.humanDate)} · ${post.readingMinutes} min read</div>
+    <div class="side-story__meta">${escapeHtml(post.humanDate)}  ${post.readingMinutes} min read</div>
   </div>
 </article>`;
 }
@@ -637,7 +637,7 @@ function buildExcerpt(text, maxLen) {
   if (plain.length <= maxLen) {
     return plain;
   }
-  return `${plain.slice(0, maxLen - 1).trim()}…`;
+  return `${plain.slice(0, maxLen - 1).trim()}`;
 }
 
 function parseDate(input) {

@@ -1,8 +1,8 @@
-/* HJ TRENDING — SHARED JS */
+/* HJ TRENDING  SHARED JS */
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  // ── BACK TO TOP ──
+  //  BACK TO TOP 
   const backTop = document.getElementById('backTop');
   if (backTop) {
     window.addEventListener('scroll', () => {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }
 
-  // ── NAVBAR SHADOW ──
+  //  NAVBAR SHADOW 
   const navWrap = document.querySelector('.nav-wrap');
   if (navWrap) {
     window.addEventListener('scroll', () => {
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ── SEARCH OVERLAY ──
+  //  SEARCH OVERLAY 
   const searchBtn = document.getElementById('searchBtn');
   const searchOverlay = document.getElementById('searchOverlay');
   const searchClose = document.getElementById('searchClose');
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     searchOverlay.addEventListener('click', e => { if (e.target === searchOverlay) searchOverlay.classList.remove('open'); });
   }
 
-  // ── MOBILE MENU ──
+  //  MOBILE MENU 
   const burgerBtn = document.getElementById('burgerBtn');
   const mobileMenu = document.getElementById('mobileMenu');
   const mobileClose = document.getElementById('mobileClose');
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     mobileClose && mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
   }
 
-  // ── NEWSLETTER ──
+  //  NEWSLETTER 
   document.querySelectorAll('.nl-form').forEach(form => {
     const input = form.querySelector('input[type="email"]');
     const btn = form.querySelector('button');
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.addEventListener('click', () => {
       if (input.value && input.value.includes('@')) {
         const orig = btn.textContent;
-        btn.textContent = '✓ You\'re in!';
+        btn.textContent = ' You\'re in!';
         btn.style.background = '#00C853';
         input.value = '';
         setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 3000);
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // ── CATEGORY FILTER (homepage) ──
+  //  CATEGORY FILTER (homepage) 
   window.filterCat = function (btn, cat) {
     document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   };
 
-  // ── READING PROGRESS (article page) ──
+  //  READING PROGRESS (article page) 
   const readingBar = document.getElementById('readingBar');
   const articleBody = document.querySelector('.article-body');
   if (readingBar && articleBody) {
@@ -83,35 +83,58 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ── AUTO READ TIME ──
+  //  AUTO READ TIME 
   if (articleBody) {
     const words = articleBody.innerText.split(/\s+/).length;
     const mins = Math.max(1, Math.ceil(words / 200));
     document.querySelectorAll('.js-read-time').forEach(el => { el.textContent = mins + ' min read'; });
   }
 
-  // ── SHARE BUTTONS ──
+  //  SHARE BUTTONS 
   document.querySelectorAll('.share-btn').forEach(btn => {
-    btn.addEventListener('click', function () {
-      const type = this.dataset.share;
+    btn.addEventListener('click', function (e) {
+      const type = this.dataset.share ||
+        (this.classList.contains('share-twitter') ? 'twitter' :
+         this.classList.contains('share-facebook') ? 'facebook' :
+         this.classList.contains('share-whatsapp') ? 'whatsapp' :
+         this.classList.contains('share-copy') ? 'copy' : '');
+      if (!type) return;
+
+      if (this.tagName === 'A') {
+        // Prevent "#" anchors from jumping to top.
+        e.preventDefault();
+      }
+
       const url = encodeURIComponent(window.location.href);
       const title = encodeURIComponent(document.title);
       if (type === 'twitter') window.open(`https://twitter.com/intent/tweet?text=${title}&url=${url}`, '_blank');
       if (type === 'facebook') window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
       if (type === 'whatsapp') window.open(`https://wa.me/?text=${title}%20${url}`, '_blank');
       if (type === 'copy') {
-        navigator.clipboard.writeText(window.location.href).then(() => {
+        const showCopied = () => {
           const orig = this.textContent;
-          this.textContent = '✓ Copied!';
+          this.textContent = ' Copied!';
           this.style.background = 'var(--black)';
           this.style.color = 'var(--white)';
           setTimeout(() => { this.textContent = orig; this.style.background = ''; this.style.color = ''; }, 2000);
-        });
+        };
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(window.location.href).then(showCopied).catch(() => {});
+        } else {
+          const input = document.createElement('input');
+          input.value = window.location.href;
+          document.body.appendChild(input);
+          input.select();
+          document.execCommand('copy');
+          document.body.removeChild(input);
+          showCopied();
+        }
       }
     });
   });
 
-  // ── LOAD MORE ──
+  //  LOAD MORE 
   window.loadMore = function (btn, containerId, items) {
     btn.innerHTML = '<span>Loading...</span>';
     setTimeout(() => {
@@ -120,12 +143,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const el = document.createElement('article');
         el.className = 'card-row';
         el.dataset.cat = item.cat || '';
+        const rowImage = item.thumb
+          ? `<img src="${item.thumb}" alt="${item.title}">`
+          : `<div class="ph"><span>${item.img}</span></div>`;
         el.innerHTML = `
-          <a href="${item.href||'#'}" class="card-row__img ph ${item.ph}"><div class="ph"><span>${item.img}</span></div></a>
+          <a href="${item.href||'#'}" class="card-row__img ${item.thumb ? '' : `ph ${item.ph || ''}`}">${rowImage}</a>
           <div>
             <div class="card-row__cat ${item.catClass}">${item.catLabel}</div>
             <h3 class="card-row__title"><a href="${item.href||'#'}">${item.title}</a></h3>
-            <div class="card-row__meta">Hamza Jadoon · ${item.meta}</div>
+            <div class="card-row__meta">Hamza Jadoon  ${item.meta}</div>
           </div>`;
         container.appendChild(el);
       });

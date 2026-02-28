@@ -1,5 +1,5 @@
 ---
-title: "FIFA World Cup 2026 Full Group Stage Draw: Who Faces Who — All 12 Groups Revealed"
+title: "FIFA World Cup 2026 Full Group Stage Draw: Who Faces Who  All 12 Groups Revealed"
 date: "2026-02-28"
 category: "fifa2026"
 author: "Hamza Jadoon"
@@ -8,7 +8,7 @@ tags: ["FIFA 2026", "World Cup 2026 draw", "World Cup 2026 groups",
 "Ronaldo", "Mbappe", "Haaland", "Group of Death 2026"]
 excerpt: "The FIFA World Cup 2026 group stage draw is confirmed. 
 All 12 groups, every fixture, the Group of Death, the 
-easiest draws and our verdict on every team's chances — 
+easiest draws and our verdict on every team's chances  
 complete breakdown right here."
 thumbnail: "images/matches_draw.jpeg"
 readTime: "14 min read"
@@ -16,7 +16,7 @@ readTime: "14 min read"
 
 The FIFA World Cup 2026 group stage draw took place on 
 **December 5, 2025** at the John F. Kennedy Center for 
-the Performing Arts in Washington D.C. — and for the 
+the Performing Arts in Washington D.C.  and for the 
 first time in history, 48 teams now know exactly who 
 they face in the biggest sporting tournament on earth.
 
@@ -40,21 +40,21 @@ everything you need to know.
 ### Group A
 | Team | FIFA Ranking |
 |---|---|
-| 🇲🇽 Mexico (Host) | 15 |
-| 🇰🇷 South Korea | 22 |
-| 🇿🇦 South Africa | — |
-| UEFA Playoff D Winner* | — |
+|  Mexico (Host) | 15 |
+|  South Korea | 22 |
+|  South Africa |  |
+| UEFA Playoff D Winner* |  |
 
 *UEFA Playoff D: Denmark, Czechia, Republic of 
-Ireland, North Macedonia — decided March 2026
+Ireland, North Macedonia  decided March 2026
 
 **Verdict:** Mexico have the advantage as hosts and 
 should top this group. South Korea are dangerous and 
 have the quality to make the knockouts. The Playoff D 
-winner — likely Denmark — could make this genuinely 
+winner  likely Denmark  could make this genuinely 
 competitive.
 
-**Opening match:** Mexico vs South Africa — 
+**Opening match:** Mexico vs South Africa  
 **June 11, 2026, Estadio Azteca, Mexico City** 
 (Tournament opener)
 
@@ -63,13 +63,13 @@ competitive.
 ### Group B
 | Team | FIFA Ranking |
 |---|---|
-| 🇨🇦 Canada (Host) | — |
-| 🇨🇭 Switzerland | 17 |
-| 🇶🇦 Qatar | — |
-| UEFA Playoff A Winner* | — |
+|  Canada (Host) |  |
+|  Switzerland | 17 |
+|  Qatar |  |
+| UEFA Playoff A Winner* |  |
 
 *UEFA Playoff A: Italy, Wales, Bosnia-Herzegovina, 
-Northern Ireland — decided March 2026
+Northern Ireland  decided March 2026
 
 **Verdict:** Switzerland are actually the 
 highest-ranked confirmed team in this group. Canada 
@@ -77,7 +77,7 @@ as hosts get massive crowd support. If Italy qualify
 through the playoff, this group becomes far more 
 competitive overnight. Qatar are unlikely to threaten.
 
-**Opening match:** Canada vs UEFA Playoff A Winner — 
+**Opening match:** Canada vs UEFA Playoff A Winner  
 **June 12, BMO Field, Toronto**
 
 ---
@@ -85,10 +85,10 @@ competitive overnight. Qatar are unlikely to threaten.
 ### Group C
 | Team | FIFA Ranking |
 |---|---|
-| 🇧🇷 Brazil | 5 |
-| 🇲🇦 Morocco | — |
-| 🏴 Scotland | — |
-| 🇭🇹 Haiti | — |
+|  Brazil | 5 |
+|  Morocco |  |
+|  Scotland |  |
+|  Haiti |  |
 
 **Verdict:** Brazil vs Morocco is one of the most 
 anticipated group stage matches of the entire 
@@ -100,24 +100,24 @@ advance but this is not the walk it looks on paper.
 
 ---
 
-### Group D — USA's Path
+### Group D  USA's Path
 | Team | FIFA Ranking |
 |---|---|
-| 🇺🇸 USA (Host) | 14 |
-| 🇵🇾 Paraguay | — |
-| 🇦🇺 Australia | 26 |
-| UEFA Playoff C Winner* | — |
+|  USA (Host) | 14 |
+|  Paraguay |  |
+|  Australia | 26 |
+| UEFA Playoff C Winner* |  |
 
-*UEFA Playoff C: Türkiye, Romania, Slovakia, Kosovo
+*UEFA Playoff C: Trkiye, Romania, Slovakia, Kosovo
 
 **Verdict:** USA got a manageable draw as hosts. 
 Paraguay and Australia are beatable. The wildcard is 
-the Playoff C winner — if Türkiye qualify (ranked 25) 
+the Playoff C winner  if Trkiye qualify (ranked 25) 
 they immediately become the second-highest ranked team 
 in the group and a serious threat. USA opens against 
 Paraguay on June 12 at SoFi Stadium, Los Angeles.
 
-**Opening match:** USA vs Paraguay — 
+**Opening match:** USA vs Paraguay  
 **June 12, SoFi Stadium, Inglewood, California**
 
 ---
@@ -125,13 +125,13 @@ Paraguay on June 12 at SoFi Stadium, Los Angeles.
 ### Group E
 | Team | FIFA Ranking |
 |---|---|
-| 🇩🇪 Germany | 9 |
-| 🇪🇨 Ecuador | — |
-| 🇨🇮 Ivory Coast | — |
-| 🇨🇼 Curaçao | 82 |
+|  Germany | 9 |
+|  Ecuador |  |
+|  Ivory Coast |  |
+|  Curaao | 82 |
 
 **Verdict:** Germany got the easiest draw of any 
-top-ranked nation. Curaçao, ranked 82nd, made 
+top-ranked nation. Curaao, ranked 82nd, made 
 history as the smallest nation by population 
 (156,115 people) ever to qualify for a World Cup. 
 Germany should cruise through this group and will 
@@ -142,15 +142,15 @@ be rested and confident heading into the knockouts.
 ### Group F
 | Team | FIFA Ranking |
 |---|---|
-| 🇳🇱 Netherlands | 7 |
-| 🇯🇵 Japan | — |
-| 🇹🇳 Tunisia | — |
-| UEFA Playoff B Winner* | — |
+|  Netherlands | 7 |
+|  Japan |  |
+|  Tunisia |  |
+| UEFA Playoff B Winner* |  |
 
 *UEFA Playoff B: Poland, Ukraine, and others
 
 **Verdict:** Netherlands are favourites but Japan are 
-genuinely dangerous — they knocked Germany out in 
+genuinely dangerous  they knocked Germany out in 
 Qatar 2022. This group has the closest FIFA ranking 
 gap between all four teams of any group, making it 
 potentially the most competitive in the tournament.
@@ -160,10 +160,10 @@ potentially the most competitive in the tournament.
 ### Group G
 | Team | FIFA Ranking |
 |---|---|
-| 🇧🇪 Belgium | 8 |
-| 🇮🇷 Iran | — |
-| 🇪🇬 Egypt | — |
-| 🇳🇿 New Zealand | — |
+|  Belgium | 8 |
+|  Iran |  |
+|  Egypt |  |
+|  New Zealand |  |
 
 **Verdict:** Belgium's Golden Generation has aged 
 but still has quality. They should advance 
@@ -177,31 +177,31 @@ worth watching.
 ### Group H
 | Team | FIFA Ranking |
 |---|---|
-| 🇪🇸 Spain | 1 (World No.1) |
-| 🇺🇾 Uruguay | 16 |
-| 🇸🇦 Saudi Arabia | 60 |
-| 🇨🇻 Cape Verde | 68 |
+|  Spain | 1 (World No.1) |
+|  Uruguay | 16 |
+|  Saudi Arabia | 60 |
+|  Cape Verde | 68 |
 
 **Verdict:** Spain, ranked World No.1 and tournament 
 favourites at +400 with bookmakers, got a testing 
 draw with Uruguay at 16th in the world. But Saudi 
 Arabia (60th) and Cape Verde (68th) make this a 
-managable group overall. Spain will top it — the 
+managable group overall. Spain will top it  the 
 question is whether Uruguay take second.
 
 ---
 
-### Group I — The Group of Death 💀
+### Group I  The Group of Death 
 | Team | FIFA Ranking |
 |---|---|
-| 🇫🇷 France | 3 |
-| 🇸🇳 Senegal | — |
-| 🇳🇴 Norway | — |
-| Intercontinental Playoff 2 | — |
+|  France | 3 |
+|  Senegal |  |
+|  Norway |  |
+| Intercontinental Playoff 2 |  |
 
 **Verdict:** This is **the Group of Death** at 
-FIFA 2026. France (Mbappé), Norway (Haaland), 
-Senegal (Mané, Mendy) — three nations with genuine 
+FIFA 2026. France (Mbapp), Norway (Haaland), 
+Senegal (Man, Mendy)  three nations with genuine 
 world-class talent in a single group. France and 
 Senegal's opener is loaded with history: they met 
 at the 2002 World Cup where Senegal pulled off one 
@@ -213,24 +213,24 @@ absolutely desperate to perform on the biggest stage.
 Don't be surprised if all three teams finish level 
 on points and the third-place team still advances.
 
-**Must-watch match:** France vs Senegal · 
-France vs Norway (Mbappé vs Haaland)
+**Must-watch match:** France vs Senegal  
+France vs Norway (Mbapp vs Haaland)
 
 ---
 
 ### Group J
 | Team | FIFA Ranking |
 |---|---|
-| 🇦🇷 Argentina | 2 |
-| 🇦🇹 Austria | — |
-| 🇩🇿 Algeria | — |
-| 🇯🇴 Jordan | — |
+|  Argentina | 2 |
+|  Austria |  |
+|  Algeria |  |
+|  Jordan |  |
 
 **Verdict:** Argentina, with or without Messi, 
 should win this group comfortably. At +800 with 
 bookmakers, the defending champions are among the 
 favourites to retain their title. Austria and 
-Algeria will fight for second place — only 11 FIFA 
+Algeria will fight for second place  only 11 FIFA 
 ranking spots separate them.
 
 ---
@@ -238,15 +238,15 @@ ranking spots separate them.
 ### Group K
 | Team | FIFA Ranking |
 |---|---|
-| 🇵🇹 Portugal | 6 |
-| 🇨🇴 Colombia | 13 |
-| 🇺🇿 Uzbekistan | 50 |
-| Intercontinental Playoff 1* | — |
+|  Portugal | 6 |
+|  Colombia | 13 |
+|  Uzbekistan | 50 |
+| Intercontinental Playoff 1* |  |
 
 *Playoff 1: DR Congo, Jamaica, New Caledonia
 
 **Verdict:** Portugal vs Colombia is appointment 
-television. Both are expected to advance — the 
+television. Both are expected to advance  the 
 opening match between them will likely decide who 
 tops the group. Ronaldo vs the new generation of 
 Colombian talent. Uzbekistan, at 50th, are the 
@@ -261,15 +261,15 @@ history and represent a fascinating story.
 ### Group L
 | Team | FIFA Ranking |
 |---|---|
-| 🏴 England | 4 |
-| 🇭🇷 Croatia | 10 |
-| 🇵🇦 Panama | — |
-| 🇬🇭 Ghana | — |
+|  England | 4 |
+|  Croatia | 10 |
+|  Panama |  |
+|  Ghana |  |
 
 **Verdict:** Based on FIFA rankings, Group L has 
 the strongest case for being the toughest group in 
 the tournament after Group I. It is the only group 
-with two top-10 ranked teams — England (4th) and 
+with two top-10 ranked teams  England (4th) and 
 Croatia (10th). England are +600 with bookmakers 
 to win the whole tournament. Croatia have the 
 experience. Panama and Ghana make this a full 
@@ -280,7 +280,7 @@ group of four genuine footballing nations.
 
 ---
 
-## The Group of Death — Group I Breakdown
+## The Group of Death  Group I Breakdown
 
 Group I is unanimously being called the most brutal 
 group in the tournament. Let's be specific about 
@@ -288,8 +288,8 @@ why:
 
 France are ranked 3rd in the world and are the 
 second favourites at +650 to win the whole 
-tournament. Kylian Mbappé is in peak form. Their 
-squad depth is extraordinary — even without 
+tournament. Kylian Mbapp is in peak form. Their 
+squad depth is extraordinary  even without 
 Benzema, they have six or seven players who would 
 walk into any other international squad.
 
@@ -301,8 +301,8 @@ His motivation is absolute.
 
 Senegal won the Africa Cup of Nations in 2022 
 and are the strongest African nation at this 
-tournament. Sadio Mané, Edouard Mendy, Kalidou 
-Koulibaly — this is a squad with genuine 
+tournament. Sadio Man, Edouard Mendy, Kalidou 
+Koulibaly  this is a squad with genuine 
 world-class quality across every position.
 
 Three of these teams could finish with identical 
@@ -315,7 +315,7 @@ heavyweights goes home in the group stage.
 
 | Fact | Detail |
 |---|---|
-| Tournament dates | June 11 – July 19, 2026 |
+| Tournament dates | June 11  July 19, 2026 |
 | Final venue | MetLife Stadium, New Jersey |
 | Opening match | Mexico vs South Africa, June 11 |
 | Total teams | 48 (expanded format, first time) |
@@ -327,20 +327,20 @@ heavyweights goes home in the group stage.
 
 ---
 
-## Tournament Favourites — Bookmaker Odds
+## Tournament Favourites  Bookmaker Odds
 
 | Team | Odds to Win |
 |---|---|
-| 🇪🇸 Spain | +400 |
-| 🏴 England | +600 |
-| 🇫🇷 France | +650 |
-| 🇧🇷 Brazil | +750 |
-| 🇦🇷 Argentina (holders) | +800 |
-| 🇩🇪 Germany | — |
-| 🇵🇹 Portugal | — |
-| 🇺🇸 USA (hosts) | +6600 |
+|  Spain | +400 |
+|  England | +600 |
+|  France | +650 |
+|  Brazil | +750 |
+|  Argentina (holders) | +800 |
+|  Germany |  |
+|  Portugal |  |
+|  USA (hosts) | +6600 |
 
-Spain are the bookmakers' favourite — ranked World 
+Spain are the bookmakers' favourite  ranked World 
 No.1 and coming off their Euro 2024 triumph, they 
 are the most complete international squad in the 
 world right now. England at +600 reflect the belief 
@@ -356,11 +356,11 @@ World Champions. This is a genuine blockbuster.
 
 **2. France vs Senegal (Group I)**
 History between these two nations. Senegal beat 
-France in 2002. Mbappé vs Mané. The emotion in 
+France in 2002. Mbapp vs Man. The emotion in 
 this match will be extraordinary.
 
 **3. France vs Norway (Group I)**
-Mbappé vs Haaland. Two of the greatest players 
+Mbapp vs Haaland. Two of the greatest players 
 on earth in a direct group stage confrontation. This is the game every neutral wants to see.
 
 **4. Portugal vs Colombia (Group K)**
@@ -381,26 +381,26 @@ Six spots remain open, to be decided in **March
 
 **UEFA Playoffs (4 spots):**
 - Playoff A: Italy, Wales, Bosnia-Herzegovina, 
-Northern Ireland → Group B
-- Playoff B: Poland, Ukraine + others → Group F
-- Playoff C: Türkiye, Romania, Slovakia, Kosovo 
-→ Group D
+Northern Ireland  Group B
+- Playoff B: Poland, Ukraine + others  Group F
+- Playoff C: Trkiye, Romania, Slovakia, Kosovo 
+ Group D
 - Playoff D: Denmark, Czechia, Ireland, 
-North Macedonia → Group A
+North Macedonia  Group A
 
 **Intercontinental Playoffs (2 spots):**
 - Playoff 1: DR Congo, Jamaica, New Caledonia 
-→ Group K
-- Playoff 2: Iraq, Bolivia, Suriname → Group I
+ Group K
+- Playoff 2: Iraq, Bolivia, Suriname  Group I
 
-The biggest name here is Italy — if they win 
+The biggest name here is Italy  if they win 
 Playoff A, they enter Group B with Canada and 
 Switzerland and immediately become a major story. 
 Italy missing a World Cup (as they did in 2018 
 and 2022) would be a massive footballing news 
 event. Their qualification is not guaranteed.
 
-Türkiye in Playoff C is also significant — 
+Trkiye in Playoff C is also significant  
 if they qualify, they go into Group D with the 
 USA and become the second highest-ranked team 
 in that group.
@@ -411,8 +411,8 @@ in that group.
 
 The FIFA World Cup 2026 group stage draw has 
 delivered everything football fans wanted. A clear 
-Group of Death. A fairytale story with Curaçao. 
-A potential Ronaldo farewell in Group K. Mbappé 
+Group of Death. A fairytale story with Curaao. 
+A potential Ronaldo farewell in Group K. Mbapp 
 vs Haaland in Group I. Argentina defending their 
 title. England finally looking like genuine 
 contenders.
