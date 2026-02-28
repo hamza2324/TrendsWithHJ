@@ -267,8 +267,8 @@ footer { background: var(--black); color: var(--white); border-top: 4px solid va
 .breadcrumb__sep { font-size: 10px; color: var(--grey-300); }
 .breadcrumb__current { font-family: 'Space Mono', monospace; font-size: 10px; color: var(--grey-700); letter-spacing: .04em; }
 
-.article-hero { width: 100%; max-height: 420px; overflow: hidden; }
-.article-hero img { width: 100%; max-height: 420px; object-fit: cover; }
+.article-hero { width: 100%; max-height: 360px; overflow: hidden; aspect-ratio: 16/9; }
+.article-hero img { width: 100%; height: 100%; object-fit: cover; }
 .article-hero__caption { max-width: var(--max-w); margin: 0 auto; padding: 8px 20px; font-family: 'Space Mono', monospace; font-size: 10px; color: var(--grey-500); }
 
 .article-header { max-width: 760px; margin: 0 auto; padding: 32px 20px 0; }
@@ -297,7 +297,7 @@ footer { background: var(--black); color: var(--white); border-top: 4px solid va
 .article-body strong { font-weight: 600; color: var(--black); }
 .article-body ul, .article-body ol { font-size: 16px; line-height: 1.75; padding-left: 22px; margin-bottom: 26px; }
 .article-body li { margin-bottom: 8px; }
-.article-body img { width: 100%; border: 1px solid var(--grey-200); margin: 32px 0; }
+.article-body img { width: 100%; height: auto; max-width: 100%; border: 1px solid var(--grey-200); margin: 32px 0; border-radius: 4px; }
 .article-body code { font-family: 'Space Mono', monospace; font-size: 13px; background: var(--grey-100); border: 1px solid var(--grey-200); padding: 2px 6px; color: var(--red); }
 .article-body hr { border: none; border-top: 2px solid var(--grey-200); margin: 40px 0; }
 
@@ -363,8 +363,8 @@ footer { background: var(--black); color: var(--white); border-top: 4px solid va
   .card__img { max-height: 210px; }
   .card-wide__img { min-height: 180px; max-height: 240px; }
   .hero__img { max-height: 300px; }
-  .article-hero { max-height: 280px; }
-  .article-hero img { max-height: 280px; }
+  .article-hero { max-height: 240px; }
+  .article-hero img { height: 100%; max-height: 240px; }
 }
 @media (max-width: 480px) {
   .back-top { bottom: 16px; right: 16px; }
