@@ -48,6 +48,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.signingkey ""
+          
+          # Fetch latest to ensure we're up to date
+          git fetch origin main --quiet
           
           # Stage all generated files
           git add posts/*.html index.html blog.html news.html sports.html gaming.html entertainment.html trending.html fifa2026.html sitemap.xml ads.txt 2>/dev/null || true
@@ -58,20 +62,49 @@ jobs:
             exit 0
           fi
           
-          # Commit changes with [skip ci] to prevent recursive triggers
+          # Get current state
+          CURRENT_COMMIT=$(git rev-parse HEAD)
+          ORIGIN_COMMIT=$(git rev-parse origin/main)
+          
+          # If we've fallen behind, rebase first
+          if [ "$CURRENT_COMMIT" != "$ORIGIN_COMMIT" ]; then
+            echo "⚠ Rebasing against latest origin/main..."
+            git rebase origin/main || {
+              echo "✗ Rebase failed - trying reset instead"
+              git reset --hard origin/main
+            }
+          fi
+          
+          # Commit changes with [skip ci] 
           echo "✓ Changes detected - committing build output..."
-          git commit -m "chore: auto-build markdown posts [skip ci]" --no-verify
+          git commit -m "chore: auto-build markdown posts [skip ci]" --no-verify || {
+            echo "✗ Commit failed"
+            exit 1
+          }
           
-          # Push with retry logic
-          for i in {1..3}; do
-            if git push origin main --force-with-lease; then
-              echo "✓ Successfully pushed build artifacts to main"
-              exit 0
-            else
-              echo "⚠ Push attempt $i failed - retrying in 5 seconds..."
-              sleep 5
+          # Push with safety options
+          echo "✓ Pushing to remote..."
+          if git push origin main --no-verify; then
+            echo "✓ Successfully pushed build artifacts"
+            exit 0
+          else
+            echo "✗ First push attempt failed - checking status..."
+            git fetch origin main --quiet
+            
+            # If remote has new changes, rebase and retry once
+            if git rebase origin/main; then
+              echo "⚠ Retry after rebase..."
+              git push origin main --no-verify && {
+                echo "✓ Successfully pushed after rebase"
+                exit 0
+              }
             fi
-          done
-          
-          echo "✗ Push failed after 3 attempts"
-          exit 1
+            
+            echo "✗ Could not push build artifacts"
+            exit 1
+          fi
+
+      - name: Build completion
+        run: |
+          echo "✓ Markdown build workflow completed successfully"
+          echo "✓ All generated files are up to date"
