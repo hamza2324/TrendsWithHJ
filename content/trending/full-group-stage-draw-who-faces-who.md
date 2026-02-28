@@ -10,7 +10,7 @@ excerpt: "The FIFA World Cup 2026 group stage draw is confirmed.
 All 12 groups, every fixture, the Group of Death, the 
 easiest draws and our verdict on every team's chances — 
 complete breakdown right here."
-thumbnail: "images/fifa-2026-group-draw.jpg"
+thumbnail: "images/matches_draw.jpeg"
 readTime: "14 min read"
 ---
 
