@@ -28,6 +28,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -49,62 +52,51 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.signingkey ""
-          
-          # Fetch latest to ensure we're up to date
+          git checkout -B main origin/main
           git fetch origin main --quiet
-          
-          # Stage all generated files
+
           git add posts/*.html index.html blog.html news.html sports.html gaming.html entertainment.html trending.html fifa2026.html sitemap.xml ads.txt 2>/dev/null || true
-          
-          # Check if there are actual changes
+
           if git diff --cached --quiet; then
-            echo "✓ No changes to rebuild - skipping commit"
+            echo "No changes to rebuild - skipping commit"
             exit 0
           fi
-          
-          # Get current state
+
           CURRENT_COMMIT=$(git rev-parse HEAD)
           ORIGIN_COMMIT=$(git rev-parse origin/main)
-          
-          # If we've fallen behind, rebase first
           if [ "$CURRENT_COMMIT" != "$ORIGIN_COMMIT" ]; then
-            echo "⚠ Rebasing against latest origin/main..."
+            echo "Rebasing against latest origin/main..."
             git rebase origin/main || {
-              echo "✗ Rebase failed - trying reset instead"
+              echo "Rebase failed - trying reset instead"
               git reset --hard origin/main
             }
           fi
-          
-          # Commit changes with [skip ci] 
-          echo "✓ Changes detected - committing build output..."
+
+          echo "Changes detected - committing build output..."
           git commit -m "chore: auto-build markdown posts [skip ci]" --no-verify || {
-            echo "✗ Commit failed"
+            echo "Commit failed"
             exit 1
           }
-          
-          # Push with safety options
-          echo "✓ Pushing to remote..."
-          if git push origin main --no-verify; then
-            echo "✓ Successfully pushed build artifacts"
+
+          echo "Pushing to remote..."
+          if git push origin HEAD:main --no-verify; then
+            echo "Successfully pushed build artifacts"
             exit 0
           else
-            echo "✗ First push attempt failed - checking status..."
+            echo "First push attempt failed - checking status..."
             git fetch origin main --quiet
-            
-            # If remote has new changes, rebase and retry once
             if git rebase origin/main; then
-              echo "⚠ Retry after rebase..."
-              git push origin main --no-verify && {
-                echo "✓ Successfully pushed after rebase"
+              echo "Retry after rebase..."
+              git push origin HEAD:main --no-verify && {
+                echo "Successfully pushed after rebase"
                 exit 0
               }
             fi
-            
-            echo "✗ Could not push build artifacts"
+            echo "Could not push build artifacts"
             exit 1
           fi
 
       - name: Build completion
         run: |
-          echo "✓ Markdown build workflow completed successfully"
-          echo "✓ All generated files are up to date"
+          echo "Markdown build workflow completed successfully"
+          echo "All generated files are up to date"
