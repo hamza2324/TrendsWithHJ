@@ -213,6 +213,20 @@ function updateIndexPage(posts) {
     });
   }
 
+  // ---- trending sidebar -----------------------------------------
+  // replace hardcoded 'Trending Now' items with the latest posts
+  const trendingWidget = $(".sidebar .widget").first();
+  if (trendingWidget.length) {
+    trendingWidget.find(".trend-item").remove();
+    posts.slice(0, 5).forEach((post, idx) => {
+      const num = idx + 1;
+      const cat = post.category.label;
+      const url = `posts/${post.slug}.html`;
+      const html = `<div class="trend-item"><span class="trend-num">${num}</span><div><div class="trend-cat">${cat}</div><a href="${url}" class="trend-title">${escapeHtml(post.title)}</a><div class="trend-meta">${escapeHtml(post.readingMinutes + ' min read')}</div></div></div>`;
+      trendingWidget.append(html);
+    });
+  }
+
   fs.writeFileSync(indexPath, $.html(), "utf8");
 }
 
