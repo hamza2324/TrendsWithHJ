@@ -118,6 +118,7 @@ function loadPosts() {
 function buildPostPage(post, allPosts, templateHtml) {
   const $ = cheerio.load(templateHtml, { decodeEntities: false });
   ensureFavicon($, "../images/web-logo.jpeg");
+  ensureAnalytics($);
 
   const pageTitle = `${post.title} | HJ Trending`;
   $("title").text(pageTitle);
@@ -193,6 +194,7 @@ function updateIndexPage(posts) {
   }
   const $ = cheerio.load(fs.readFileSync(indexPath, "utf8"), { decodeEntities: false });
   ensureFavicon($, "images/web-logo.jpeg");
+  ensureAnalytics($);
   const latest = posts.slice(0, HOME_LATEST_LIMIT);
   const more = posts.slice(HOME_LATEST_LIMIT, HOME_LATEST_LIMIT + 18);
   const sideLatest = posts.slice(0, 4);
@@ -239,6 +241,7 @@ function updateBlogPage(posts) {
   }
   const $ = cheerio.load(fs.readFileSync(blogPath, "utf8"), { decodeEntities: false });
   ensureFavicon($, "images/web-logo.jpeg");
+  ensureAnalytics($);
   const latest = posts.slice(0, BLOG_LIMIT);
   const list = posts.slice(BLOG_LIMIT, BLOG_LIMIT + 30);
 
@@ -267,6 +270,7 @@ function updateCategoryPages(posts) {
 
     const $ = cheerio.load(fs.readFileSync(pagePath, "utf8"), { decodeEntities: false });
     ensureFavicon($, "images/web-logo.jpeg");
+    ensureAnalytics($);
     const grid = $("main .card-grid").first();
     if (grid.length) {
       const cards = categoryPosts.map((p) => renderGridCard(p, { includeDataCat: false }));
@@ -384,6 +388,20 @@ function ensureFavicon($, href) {
   $("head").append(`<link rel="apple-touch-icon" href="${href}">`);
 }
 
+function ensureAnalytics($) {
+  const src = "https://www.googletagmanager.com/gtag/js?id=G-8RM3JPKY8L";
+  if ($(`script[src=\"${src}\"]`).length) {
+    return;
+  }
+  $("head").append(`<script async src=\"${src}\"></script>`);
+  $("head").append(`<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-8RM3JPKY8L');
+</script>`);
+}
+
 function renderGridCard(post, opts = {}) {
   const dataAttr = opts.includeDataCat ? ` data-cat="${post.category.dataCat}"` : "";
   const thumb = post.thumbnail ? post.thumbnail : "";
@@ -474,14 +492,36 @@ function replaceTags($, tags) {
 }
 
 function replaceRelated($, post, allPosts) {
-  const related = allPosts.filter((p) => p.slug !== post.slug && p.category.key === post.category.key).slice(0, 3);
+  let related = allPosts
+    .filter((p) => p.slug !== post.slug && p.category.key === post.category.key)
+    .slice(0, 3);
+  // Fallback: if category has too few posts, show latest published posts instead of placeholders.
+  if (related.length < 3) {
+    const fallback = allPosts
+      .filter((p) => p.slug !== post.slug && !related.some((r) => r.slug === p.slug))
+      .slice(0, 3 - related.length);
+    related = related.concat(fallback);
+  }
   const container = $(".related-posts .card-grid").first();
   if (!container.length) {
     return;
   }
   const cards = related.map((r) => {
+    const thumb = r.thumbnail ? r.thumbnail : "";
+    const hasThumb = !!thumb;
+    const imgSrc = hasThumb
+      ? /^https?:/.test(thumb)
+        ? thumb
+        : thumb.startsWith("/")
+        ? `..${thumb}`
+        : `../${thumb}`
+      : "";
+    const media = hasThumb
+      ? `<img src="${imgSrc}" alt="${escapeHtml(r.title)}">`
+      : `<div class="ph"><span>${escapeHtml(r.category.label)}</span></div>`;
+    const imgClass = hasThumb ? "" : `ph ${placeholderClass(r.slug)}`;
     return `<article class="card">
-      <a href="posts/${r.slug}.html" class="card__img ph ${placeholderClass(r.slug)}"><div class="ph"><span>${escapeHtml(r.category.label)}</span></div></a>
+      <a href="posts/${r.slug}.html" class="card__img ${imgClass}">${media}</a>
       <div class="card__body">
         <div class="card__cat ${r.category.className}">${r.category.emoji} ${escapeHtml(r.category.label)}</div>
         <h3 class="card__title"><a href="posts/${r.slug}.html">${escapeHtml(r.title)}</a></h3>
@@ -491,6 +531,11 @@ function replaceRelated($, post, allPosts) {
   });
   if (cards.length > 0) {
     container.html(cards.join("\n"));
+    const seeAll = $(".related-posts .see-all-btn").first();
+    if (seeAll.length) {
+      seeAll.attr("href", `../${post.category.page}`);
+      seeAll.text(`See All ${post.category.label} Stories`);
+    }
   }
 }
 
