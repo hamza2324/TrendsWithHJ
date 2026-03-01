@@ -117,6 +117,7 @@ function loadPosts() {
 
 function buildPostPage(post, allPosts, templateHtml) {
   const $ = cheerio.load(templateHtml, { decodeEntities: false });
+  ensureFavicon($, "../images/web-logo.jpeg");
 
   const pageTitle = `${post.title} | HJ Trending`;
   $("title").text(pageTitle);
@@ -191,6 +192,7 @@ function updateIndexPage(posts) {
     return;
   }
   const $ = cheerio.load(fs.readFileSync(indexPath, "utf8"), { decodeEntities: false });
+  ensureFavicon($, "images/web-logo.jpeg");
   const latest = posts.slice(0, HOME_LATEST_LIMIT);
   const more = posts.slice(HOME_LATEST_LIMIT, HOME_LATEST_LIMIT + 18);
   const sideLatest = posts.slice(0, 4);
@@ -236,6 +238,7 @@ function updateBlogPage(posts) {
     return;
   }
   const $ = cheerio.load(fs.readFileSync(blogPath, "utf8"), { decodeEntities: false });
+  ensureFavicon($, "images/web-logo.jpeg");
   const latest = posts.slice(0, BLOG_LIMIT);
   const list = posts.slice(BLOG_LIMIT, BLOG_LIMIT + 30);
 
@@ -263,6 +266,7 @@ function updateCategoryPages(posts) {
     const categoryPosts = posts.filter((p) => p.category.key === cat.key).slice(0, CATEGORY_LIMIT);
 
     const $ = cheerio.load(fs.readFileSync(pagePath, "utf8"), { decodeEntities: false });
+    ensureFavicon($, "images/web-logo.jpeg");
     const grid = $("main .card-grid").first();
     if (grid.length) {
       const cards = categoryPosts.map((p) => renderGridCard(p, { includeDataCat: false }));
@@ -371,6 +375,13 @@ function ensureNewsPage() {
 </html>
 `;
   fs.writeFileSync(newsPath, html, "utf8");
+}
+
+function ensureFavicon($, href) {
+  $("link[rel='icon'], link[rel='shortcut icon'], link[rel='apple-touch-icon']").remove();
+  $("head").append(`<link rel="icon" type="image/jpeg" href="${href}">`);
+  $("head").append(`<link rel="shortcut icon" type="image/jpeg" href="${href}">`);
+  $("head").append(`<link rel="apple-touch-icon" href="${href}">`);
 }
 
 function renderGridCard(post, opts = {}) {
