@@ -1,0 +1,1471 @@
+{
+  "counts": {
+    "publicHtml": 49
+  },
+  "issues": {
+    "missingTitle": [],
+    "missingDesc": [],
+    "missingCanonical": [],
+    "multiCanonical": [],
+    "badCanonical": [],
+    "missingRobots": [],
+    "noindexPages": [],
+    "missingViewport": [],
+    "missingH1": [
+      "blog.html",
+      "entertainment.html",
+      "fifa2026.html",
+      "gaming.html",
+      "news.html",
+      "sports.html",
+      "trending.html"
+    ],
+    "multiH1": [],
+    "missingOg": [
+      {
+        "file": "about.html",
+        "missing": [
+          "og:url",
+          "og:image"
+        ]
+      },
+      {
+        "file": "advertise.html",
+        "missing": [
+          "og:url",
+          "og:image"
+        ]
+      },
+      {
+        "file": "blog.html",
+        "missing": [
+          "og:title",
+          "og:description",
+          "og:url",
+          "og:image"
+        ]
+      },
+      {
+        "file": "contact.html",
+        "missing": [
+          "og:url",
+          "og:image"
+        ]
+      },
+      {
+        "file": "cookie-policy.html",
+        "missing": [
+          "og:url",
+          "og:image"
+        ]
+      },
+      {
+        "file": "disclaimer.html",
+        "missing": [
+          "og:url",
+          "og:image"
+        ]
+      },
+      {
+        "file": "entertainment.html",
+        "missing": [
+          "og:description",
+          "og:url",
+          "og:image"
+        ]
+      },
+      {
+        "file": "fifa2026.html",
+        "missing": [
+          "og:description",
+          "og:url",
+          "og:image"
+        ]
+      },
+      {
+        "file": "gaming.html",
+        "missing": [
+          "og:description",
+          "og:url",
+          "og:image"
+        ]
+      },
+      {
+        "file": "guest-post.html",
+        "missing": [
+          "og:url",
+          "og:image"
+        ]
+      },
+      {
+        "file": "index.html",
+        "missing": [
+          "og:url"
+        ]
+      },
+      {
+        "file": "news.html",
+        "missing": [
+          "og:title",
+          "og:description",
+          "og:url",
+          "og:image"
+        ]
+      },
+      {
+        "file": "posts/messi-2026-world-cup-confirmed.html",
+        "missing": [
+          "og:description",
+          "og:url",
+          "og:image"
+        ]
+      },
+      {
+        "file": "privacy-policy.html",
+        "missing": [
+          "og:url",
+          "og:image"
+        ]
+      },
+      {
+        "file": "sports.html",
+        "missing": [
+          "og:url",
+          "og:image"
+        ]
+      },
+      {
+        "file": "terms-of-service.html",
+        "missing": [
+          "og:url",
+          "og:image"
+        ]
+      },
+      {
+        "file": "trending.html",
+        "missing": [
+          "og:description",
+          "og:url",
+          "og:image"
+        ]
+      }
+    ],
+    "missingTwitter": [
+      {
+        "file": "about.html",
+        "missing": [
+          "twitter:card",
+          "twitter:title",
+          "twitter:description",
+          "twitter:image"
+        ]
+      },
+      {
+        "file": "advertise.html",
+        "missing": [
+          "twitter:card",
+          "twitter:title",
+          "twitter:description",
+          "twitter:image"
+        ]
+      },
+      {
+        "file": "blog-post.html",
+        "missing": [
+          "twitter:image"
+        ]
+      },
+      {
+        "file": "blog.html",
+        "missing": [
+          "twitter:card",
+          "twitter:title",
+          "twitter:description",
+          "twitter:image"
+        ]
+      },
+      {
+        "file": "contact.html",
+        "missing": [
+          "twitter:card",
+          "twitter:title",
+          "twitter:description",
+          "twitter:image"
+        ]
+      },
+      {
+        "file": "cookie-policy.html",
+        "missing": [
+          "twitter:card",
+          "twitter:title",
+          "twitter:description",
+          "twitter:image"
+        ]
+      },
+      {
+        "file": "disclaimer.html",
+        "missing": [
+          "twitter:card",
+          "twitter:title",
+          "twitter:description",
+          "twitter:image"
+        ]
+      },
+      {
+        "file": "entertainment.html",
+        "missing": [
+          "twitter:title",
+          "twitter:description",
+          "twitter:image"
+        ]
+      },
+      {
+        "file": "fifa2026.html",
+        "missing": [
+          "twitter:title",
+          "twitter:description",
+          "twitter:image"
+        ]
+      },
+      {
+        "file": "gaming.html",
+        "missing": [
+          "twitter:title",
+          "twitter:description",
+          "twitter:image"
+        ]
+      },
+      {
+        "file": "guest-post.html",
+        "missing": [
+          "twitter:card",
+          "twitter:title",
+          "twitter:description",
+          "twitter:image"
+        ]
+      },
+      {
+        "file": "index.html",
+        "missing": [
+          "twitter:title",
+          "twitter:description",
+          "twitter:image"
+        ]
+      },
+      {
+        "file": "news.html",
+        "missing": [
+          "twitter:card",
+          "twitter:title",
+          "twitter:description",
+          "twitter:image"
+        ]
+      },
+      {
+        "file": "posts/messi-2026-world-cup-confirmed.html",
+        "missing": [
+          "twitter:title",
+          "twitter:description",
+          "twitter:image"
+        ]
+      },
+      {
+        "file": "privacy-policy.html",
+        "missing": [
+          "twitter:card",
+          "twitter:title",
+          "twitter:description",
+          "twitter:image"
+        ]
+      },
+      {
+        "file": "sports.html",
+        "missing": [
+          "twitter:title",
+          "twitter:description",
+          "twitter:image"
+        ]
+      },
+      {
+        "file": "terms-of-service.html",
+        "missing": [
+          "twitter:card",
+          "twitter:title",
+          "twitter:description",
+          "twitter:image"
+        ]
+      },
+      {
+        "file": "trending.html",
+        "missing": [
+          "twitter:title",
+          "twitter:description",
+          "twitter:image"
+        ]
+      }
+    ],
+    "missingSchema": [
+      "about.html",
+      "advertise.html",
+      "blog.html",
+      "contact.html",
+      "cookie-policy.html",
+      "disclaimer.html",
+      "entertainment.html",
+      "fifa2026.html",
+      "gaming.html",
+      "guest-post.html",
+      "news.html",
+      "posts/biggest-boxing-fight-2026-confirmed.html",
+      "posts/f1-2026-grid-whos-driving-where.html",
+      "posts/icc-champions-trophy-2026-results.html",
+      "posts/premier-league-title-race-2026-scenarios.html",
+      "privacy-policy.html",
+      "terms-of-service.html",
+      "trending.html"
+    ],
+    "imgMissingAlt": [],
+    "imgMissingDims": [
+      {
+        "file": "blog-post.html",
+        "src": "images/blog_post_img.jpeg"
+      },
+      {
+        "file": "blog.html",
+        "src": "images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "blog.html",
+        "src": "images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "blog.html",
+        "src": "images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "blog.html",
+        "src": "images/esports-bigger-than-nfl-viewership-2026.jpeg"
+      },
+      {
+        "file": "blog.html",
+        "src": "images/playstation-6-full-specs-price-launch-games.jpeg"
+      },
+      {
+        "file": "blog.html",
+        "src": "images/tweet-destroyed-billion-dollar-brand-48-hours.jpeg"
+      },
+      {
+        "file": "blog.html",
+        "src": "images/viral-airport-trick-tested.jpeg"
+      },
+      {
+        "file": "blog.html",
+        "src": "images/ucl-semifinal-2026.jpeg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/avnger-secret-wars-director.jpeg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/avnger-secret-wars-director.jpeg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/movie_streaming.jpeg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/Kendrick-Lamar-Super-Bowl-Halftime-Show.jpeg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/spider-man-4-complete-cast-plot-confirmed.jpeg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/best-movies-shows-2026-complete-streaming-guide.jpeg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/ucl-semifinal-2026.jpeg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/gta6-map-size.jpg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/fifa_worldcup_guide.jpeg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/tweet_brought.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/matches_draw.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/messi_worldcup.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/dark_horses.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/ronaldo_worldcup.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/fifa_worldcup_guide.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/fifa_worldcup_guide.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/matches_draw.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/messi_worldcup.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/ronaldo_worldcup.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/ucl-semifinal-2026.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/gta6-map-size.jpg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/netflix_record.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/tweet_brought.jpeg"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/esports-bigger-than-nfl-viewership-2026.jpeg"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/games_toplay.jpeg"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/playstation-6-full-specs-price-launch-games.jpeg"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/esports-bigger-than-nfl-viewership-2026.jpeg"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/gta_map.jpeg"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/playstation-6-full-specs-price-launch-games.jpeg"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/matches_draw.jpeg"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/fifa_worldcup_guide.jpeg"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/web-avengers-secret-wars.png"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/hero_image.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/esports-bigger-than-nfl-viewership-2026.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/esports-bigger-than-nfl-viewership-2026.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/playstation-6-full-specs-price-launch-games.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/tweet-destroyed-billion-dollar-brand-48-hours.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/dark_horses.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/viral-airport-trick-tested.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/ucl-semifinal-2026.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/greatest_goals.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/games_toplay.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/movie_streaming.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/cultural_moments.jpeg"
+      },
+      {
+        "file": "posts/2009-interview-clip-viral-explained.html",
+        "src": "../images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "posts/2009-interview-clip-viral-explained.html",
+        "src": "../images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "posts/2009-interview-clip-viral-explained.html",
+        "src": "../images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "posts/2009-interview-clip-viral-explained.html",
+        "src": "../images/tweet-destroyed-billion-dollar-brand-48-hours.jpeg"
+      },
+      {
+        "file": "posts/50m-views-viral-video-psychology-2026.html",
+        "src": "../images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "posts/50m-views-viral-video-psychology-2026.html",
+        "src": "../images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "posts/50m-views-viral-video-psychology-2026.html",
+        "src": "../images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "posts/50m-views-viral-video-psychology-2026.html",
+        "src": "../images/tweet-destroyed-billion-dollar-brand-48-hours.jpeg"
+      },
+      {
+        "file": "posts/ai-generated-image-fooled-everyone-real.html",
+        "src": "../images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "posts/ai-generated-image-fooled-everyone-real.html",
+        "src": "../images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "posts/ai-generated-image-fooled-everyone-real.html",
+        "src": "../images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "posts/ai-generated-image-fooled-everyone-real.html",
+        "src": "../images/tweet-destroyed-billion-dollar-brand-48-hours.jpeg"
+      },
+      {
+        "file": "posts/best-movies-shows-2026-complete-streaming-guide.html",
+        "src": "../images/web-stranger-things.png"
+      },
+      {
+        "file": "posts/best-movies-shows-2026-complete-streaming-guide.html",
+        "src": "../images/web-squid-game.svg"
+      },
+      {
+        "file": "posts/best-movies-shows-2026-complete-streaming-guide.html",
+        "src": "../images/web-wednesday.svg"
+      },
+      {
+        "file": "posts/best-movies-shows-2026-complete-streaming-guide.html",
+        "src": "../images/web-witcher-blood-origin.jpg"
+      },
+      {
+        "file": "posts/best-movies-shows-2026-complete-streaming-guide.html",
+        "src": "../images/web-electric-state.jpg"
+      },
+      {
+        "file": "posts/best-movies-shows-2026-complete-streaming-guide.html",
+        "src": "../images/web-you-logo.png"
+      },
+      {
+        "file": "posts/best-movies-shows-2026-complete-streaming-guide.html",
+        "src": "../images/web-daredevil-born-again.svg"
+      },
+      {
+        "file": "posts/best-movies-shows-2026-complete-streaming-guide.html",
+        "src": "../images/web-ironheart.png"
+      },
+      {
+        "file": "posts/best-movies-shows-2026-complete-streaming-guide.html",
+        "src": "../images/web-wonder-man.png"
+      },
+      {
+        "file": "posts/best-movies-shows-2026-complete-streaming-guide.html",
+        "src": "../images/web-last-of-us.png"
+      },
+      {
+        "file": "posts/best-movies-shows-2026-complete-streaming-guide.html",
+        "src": "../images/web-house-of-the-dragon.png"
+      },
+      {
+        "file": "posts/best-movies-shows-2026-complete-streaming-guide.html",
+        "src": "../images/web-euphoria.png"
+      },
+      {
+        "file": "posts/best-movies-shows-2026-complete-streaming-guide.html",
+        "src": "../images/web-avengers-secret-wars.png"
+      },
+      {
+        "file": "posts/best-movies-shows-2026-complete-streaming-guide.html",
+        "src": "../images/web-mission-impossible-8.png"
+      },
+      {
+        "file": "posts/best-movies-shows-2026-complete-streaming-guide.html",
+        "src": "../images/netflix_record.jpeg"
+      },
+      {
+        "file": "posts/best-movies-shows-2026-complete-streaming-guide.html",
+        "src": "../images/avnger-secret-wars-director.jpeg"
+      },
+      {
+        "file": "posts/best-movies-shows-2026-complete-streaming-guide.html",
+        "src": "../images/movie_streaming.jpeg"
+      },
+      {
+        "file": "posts/biggest-boxing-fight-2026-confirmed.html",
+        "src": "../images/hero_image.jpeg"
+      },
+      {
+        "file": "posts/champions-league-semi-final-draw-2026.html",
+        "src": "../images/ucl-semifinal-2026.jpeg"
+      },
+      {
+        "file": "posts/champions-league-semi-final-draw-2026.html",
+        "src": "../images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "posts/champions-league-semi-final-draw-2026.html",
+        "src": "../images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "posts/champions-league-semi-final-draw-2026.html",
+        "src": "../images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "posts/dark-horses-world-cup-2026.html",
+        "src": "../images/dark_horses.jpeg"
+      },
+      {
+        "file": "posts/esports-bigger-than-nfl-viewership-2026.html",
+        "src": "../images/esports-bigger-than-nfl-viewership-2026.jpeg"
+      },
+      {
+        "file": "posts/f1-2026-grid-whos-driving-where.html",
+        "src": "../images/hero_image.jpeg"
+      },
+      {
+        "file": "posts/full-group-stage-draw-who-faces-who.html",
+        "src": "../images/matches_draw.jpeg"
+      },
+      {
+        "file": "posts/gta6-map-bigger-than-gta5.html",
+        "src": "../images/gta6-map-size.jpg"
+      },
+      {
+        "file": "posts/icc-champions-trophy-2026-results.html",
+        "src": "../images/hero_image.jpeg"
+      },
+      {
+        "file": "posts/mbappe-deal-chaos.html",
+        "src": "../images/mbappe_chaos.jpeg"
+      },
+      {
+        "file": "posts/messi-2026-world-cup-confirmed.html",
+        "src": "../images/messi_worldcup.jpeg"
+      },
+      {
+        "file": "posts/nba-mvp-race-2026.html",
+        "src": "../images/nba-player.jpeg"
+      },
+      {
+        "file": "posts/netflix-show-broke-record.html",
+        "src": "../images/netflix_record.jpeg"
+      },
+      {
+        "file": "posts/premier-league-title-race-2026-scenarios.html",
+        "src": "../images/hero_image.jpeg"
+      },
+      {
+        "file": "posts/tweet-brought-down-brand.html",
+        "src": "../images/tweet_brought.jpeg"
+      },
+      {
+        "file": "posts/tweet-destroyed-billion-dollar-brand-48-hours.html",
+        "src": "../images/tweet-destroyed-billion-dollar-brand-48-hours.jpeg"
+      },
+      {
+        "file": "posts/tweet-destroyed-billion-dollar-brand-48-hours.html",
+        "src": "../images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "posts/tweet-destroyed-billion-dollar-brand-48-hours.html",
+        "src": "../images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "posts/tweet-destroyed-billion-dollar-brand-48-hours.html",
+        "src": "../images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "posts/viral-airport-trick-tested.html",
+        "src": "../images/viral-airport-trick-tested.jpeg"
+      },
+      {
+        "file": "posts/viral-airport-trick-tested.html",
+        "src": "../images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "posts/viral-airport-trick-tested.html",
+        "src": "../images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "posts/viral-airport-trick-tested.html",
+        "src": "../images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/fifa_worldcup_guide.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/ucl-semifinal-2026.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/ronaldo_farewell.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/ronaldo_farewell.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/nba-player.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/greatest_goals.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/australian_winner_tenis.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/gta6-map-size.jpg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/matches_draw.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/netflix_record.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/tweet_brought.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/tweet-destroyed-billion-dollar-brand-48-hours.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/viral-airport-trick-tested.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/cultural_moments.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/matches_draw.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/gta_map.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/web-avengers-secret-wars.png"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/fifa_worldcup_guide.jpeg"
+      }
+    ],
+    "imgMissingLazy": [
+      {
+        "file": "blog-post.html",
+        "src": "images/blog_post_img.jpeg"
+      },
+      {
+        "file": "blog.html",
+        "src": "images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "blog.html",
+        "src": "images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "blog.html",
+        "src": "images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "blog.html",
+        "src": "images/esports-bigger-than-nfl-viewership-2026.jpeg"
+      },
+      {
+        "file": "blog.html",
+        "src": "images/playstation-6-full-specs-price-launch-games.jpeg"
+      },
+      {
+        "file": "blog.html",
+        "src": "images/tweet-destroyed-billion-dollar-brand-48-hours.jpeg"
+      },
+      {
+        "file": "blog.html",
+        "src": "images/viral-airport-trick-tested.jpeg"
+      },
+      {
+        "file": "blog.html",
+        "src": "images/ucl-semifinal-2026.jpeg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/avnger-secret-wars-director.jpeg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/avnger-secret-wars-director.jpeg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/movie_streaming.jpeg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/Kendrick-Lamar-Super-Bowl-Halftime-Show.jpeg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/spider-man-4-complete-cast-plot-confirmed.jpeg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/best-movies-shows-2026-complete-streaming-guide.jpeg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/ucl-semifinal-2026.jpeg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/gta6-map-size.jpg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/fifa_worldcup_guide.jpeg"
+      },
+      {
+        "file": "entertainment.html",
+        "src": "images/tweet_brought.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/matches_draw.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/messi_worldcup.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/dark_horses.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/ronaldo_worldcup.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/fifa_worldcup_guide.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/fifa_worldcup_guide.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/matches_draw.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/messi_worldcup.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/ronaldo_worldcup.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/ucl-semifinal-2026.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/gta6-map-size.jpg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/netflix_record.jpeg"
+      },
+      {
+        "file": "fifa2026.html",
+        "src": "images/tweet_brought.jpeg"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/esports-bigger-than-nfl-viewership-2026.jpeg"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/games_toplay.jpeg"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/playstation-6-full-specs-price-launch-games.jpeg"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/esports-bigger-than-nfl-viewership-2026.jpeg"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/gta_map.jpeg"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/playstation-6-full-specs-price-launch-games.jpeg"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/matches_draw.jpeg"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/fifa_worldcup_guide.jpeg"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/web-avengers-secret-wars.png"
+      },
+      {
+        "file": "gaming.html",
+        "src": "images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/esports-bigger-than-nfl-viewership-2026.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/esports-bigger-than-nfl-viewership-2026.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/playstation-6-full-specs-price-launch-games.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/tweet-destroyed-billion-dollar-brand-48-hours.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/dark_horses.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/viral-airport-trick-tested.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/ucl-semifinal-2026.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/greatest_goals.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/games_toplay.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/movie_streaming.jpeg"
+      },
+      {
+        "file": "index.html",
+        "src": "images/cultural_moments.jpeg"
+      },
+      {
+        "file": "posts/2009-interview-clip-viral-explained.html",
+        "src": "../images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "posts/2009-interview-clip-viral-explained.html",
+        "src": "../images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "posts/2009-interview-clip-viral-explained.html",
+        "src": "../images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "posts/2009-interview-clip-viral-explained.html",
+        "src": "../images/tweet-destroyed-billion-dollar-brand-48-hours.jpeg"
+      },
+      {
+        "file": "posts/50m-views-viral-video-psychology-2026.html",
+        "src": "../images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "posts/50m-views-viral-video-psychology-2026.html",
+        "src": "../images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "posts/50m-views-viral-video-psychology-2026.html",
+        "src": "../images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "posts/50m-views-viral-video-psychology-2026.html",
+        "src": "../images/tweet-destroyed-billion-dollar-brand-48-hours.jpeg"
+      },
+      {
+        "file": "posts/ai-generated-image-fooled-everyone-real.html",
+        "src": "../images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "posts/ai-generated-image-fooled-everyone-real.html",
+        "src": "../images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "posts/ai-generated-image-fooled-everyone-real.html",
+        "src": "../images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "posts/ai-generated-image-fooled-everyone-real.html",
+        "src": "../images/tweet-destroyed-billion-dollar-brand-48-hours.jpeg"
+      },
+      {
+        "file": "posts/biggest-boxing-fight-2026-confirmed.html",
+        "src": "../images/hero_image.jpeg"
+      },
+      {
+        "file": "posts/champions-league-semi-final-draw-2026.html",
+        "src": "../images/ucl-semifinal-2026.jpeg"
+      },
+      {
+        "file": "posts/champions-league-semi-final-draw-2026.html",
+        "src": "../images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "posts/champions-league-semi-final-draw-2026.html",
+        "src": "../images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "posts/champions-league-semi-final-draw-2026.html",
+        "src": "../images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "posts/f1-2026-grid-whos-driving-where.html",
+        "src": "../images/hero_image.jpeg"
+      },
+      {
+        "file": "posts/full-group-stage-draw-who-faces-who.html",
+        "src": "../images/matches_draw.jpeg"
+      },
+      {
+        "file": "posts/gta6-map-bigger-than-gta5.html",
+        "src": "../images/gta6-map-size.jpg"
+      },
+      {
+        "file": "posts/icc-champions-trophy-2026-results.html",
+        "src": "../images/hero_image.jpeg"
+      },
+      {
+        "file": "posts/mbappe-deal-chaos.html",
+        "src": "../images/mbappe_chaos.jpeg"
+      },
+      {
+        "file": "posts/netflix-show-broke-record.html",
+        "src": "../images/netflix_record.jpeg"
+      },
+      {
+        "file": "posts/premier-league-title-race-2026-scenarios.html",
+        "src": "../images/hero_image.jpeg"
+      },
+      {
+        "file": "posts/tweet-brought-down-brand.html",
+        "src": "../images/tweet_brought.jpeg"
+      },
+      {
+        "file": "posts/tweet-destroyed-billion-dollar-brand-48-hours.html",
+        "src": "../images/tweet-destroyed-billion-dollar-brand-48-hours.jpeg"
+      },
+      {
+        "file": "posts/tweet-destroyed-billion-dollar-brand-48-hours.html",
+        "src": "../images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "posts/tweet-destroyed-billion-dollar-brand-48-hours.html",
+        "src": "../images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "posts/tweet-destroyed-billion-dollar-brand-48-hours.html",
+        "src": "../images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "posts/viral-airport-trick-tested.html",
+        "src": "../images/viral-airport-trick-tested.jpeg"
+      },
+      {
+        "file": "posts/viral-airport-trick-tested.html",
+        "src": "../images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "posts/viral-airport-trick-tested.html",
+        "src": "../images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "posts/viral-airport-trick-tested.html",
+        "src": "../images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/fifa_worldcup_guide.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/ucl-semifinal-2026.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/ronaldo_farewell.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/ronaldo_farewell.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/nba-player.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/greatest_goals.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/australian_winner_tenis.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/gta6-map-size.jpg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/matches_draw.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/netflix_record.jpeg"
+      },
+      {
+        "file": "sports.html",
+        "src": "images/tweet_brought.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/2009-interview-clip-viral-explained.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/viral-video-50m.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/ai-generated-image-fooled-everyone-real.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/tweet-destroyed-billion-dollar-brand-48-hours.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/viral-airport-trick-tested.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/cultural_moments.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/matches_draw.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/gta_map.jpeg"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/web-avengers-secret-wars.png"
+      },
+      {
+        "file": "trending.html",
+        "src": "images/fifa_worldcup_guide.jpeg"
+      }
+    ],
+    "brokenInternal": [],
+    "duplicateTitle": {},
+    "duplicateDesc": {},
+    "duplicateH1": {
+      "FIFA World Cup 2026 Dark Horses  Every Team That Could Genuinely Shock the World": [
+        "blog-post.html",
+        "posts/dark-horses-world-cup-2026.html"
+      ]
+    },
+    "missingGtag": [
+      "posts/esports-bigger-than-nfl-viewership-2026.html",
+      "posts/playstation-6-full-specs-price-launch-games.html"
+    ],
+    "urlUnderscore": [],
+    "httpInternal": [],
+    "mixedContent": []
+  },
+  "sitemap": {
+    "exists": true,
+    "urls": [
+      "https://hjtrending.blog/about.html",
+      "https://hjtrending.blog/advertise.html",
+      "https://hjtrending.blog/blog-post.html",
+      "https://hjtrending.blog/blog.html",
+      "https://hjtrending.blog/contact.html",
+      "https://hjtrending.blog/cookie-policy.html",
+      "https://hjtrending.blog/disclaimer.html",
+      "https://hjtrending.blog/entertainment.html",
+      "https://hjtrending.blog/fifa2026.html",
+      "https://hjtrending.blog/gaming.html",
+      "https://hjtrending.blog/guest-post.html",
+      "https://hjtrending.blog/index.html",
+      "https://hjtrending.blog/news.html",
+      "https://hjtrending.blog/privacy-policy.html",
+      "https://hjtrending.blog/sports.html",
+      "https://hjtrending.blog/terms-of-service.html",
+      "https://hjtrending.blog/trending.html",
+      "https://hjtrending.blog/posts/2009-interview-clip-viral-explained.html",
+      "https://hjtrending.blog/posts/50m-views-viral-video-psychology-2026.html",
+      "https://hjtrending.blog/posts/ai-generated-image-fooled-everyone-real.html",
+      "https://hjtrending.blog/posts/esports-bigger-than-nfl-viewership-2026.html",
+      "https://hjtrending.blog/posts/playstation-6-full-specs-price-launch-games.html",
+      "https://hjtrending.blog/posts/tweet-destroyed-billion-dollar-brand-48-hours.html",
+      "https://hjtrending.blog/posts/viral-airport-trick-tested.html",
+      "https://hjtrending.blog/posts/champions-league-semi-final-draw-2026.html",
+      "https://hjtrending.blog/"
+    ],
+    "badUrls": [],
+    "missingLastmod": [],
+    "missingChangefreq": [
+      "https://hjtrending.blog/about.html",
+      "https://hjtrending.blog/advertise.html",
+      "https://hjtrending.blog/blog-post.html",
+      "https://hjtrending.blog/blog.html",
+      "https://hjtrending.blog/contact.html",
+      "https://hjtrending.blog/cookie-policy.html",
+      "https://hjtrending.blog/disclaimer.html",
+      "https://hjtrending.blog/entertainment.html",
+      "https://hjtrending.blog/fifa2026.html",
+      "https://hjtrending.blog/gaming.html",
+      "https://hjtrending.blog/guest-post.html",
+      "https://hjtrending.blog/index.html",
+      "https://hjtrending.blog/news.html",
+      "https://hjtrending.blog/privacy-policy.html",
+      "https://hjtrending.blog/sports.html",
+      "https://hjtrending.blog/terms-of-service.html",
+      "https://hjtrending.blog/trending.html",
+      "https://hjtrending.blog/posts/2009-interview-clip-viral-explained.html",
+      "https://hjtrending.blog/posts/50m-views-viral-video-psychology-2026.html",
+      "https://hjtrending.blog/posts/ai-generated-image-fooled-everyone-real.html",
+      "https://hjtrending.blog/posts/esports-bigger-than-nfl-viewership-2026.html",
+      "https://hjtrending.blog/posts/playstation-6-full-specs-price-launch-games.html",
+      "https://hjtrending.blog/posts/tweet-destroyed-billion-dollar-brand-48-hours.html",
+      "https://hjtrending.blog/posts/viral-airport-trick-tested.html",
+      "https://hjtrending.blog/posts/champions-league-semi-final-draw-2026.html",
+      "https://hjtrending.blog/"
+    ],
+    "missingPriority": [
+      "https://hjtrending.blog/about.html",
+      "https://hjtrending.blog/advertise.html",
+      "https://hjtrending.blog/blog-post.html",
+      "https://hjtrending.blog/blog.html",
+      "https://hjtrending.blog/contact.html",
+      "https://hjtrending.blog/cookie-policy.html",
+      "https://hjtrending.blog/disclaimer.html",
+      "https://hjtrending.blog/entertainment.html",
+      "https://hjtrending.blog/fifa2026.html",
+      "https://hjtrending.blog/gaming.html",
+      "https://hjtrending.blog/guest-post.html",
+      "https://hjtrending.blog/index.html",
+      "https://hjtrending.blog/news.html",
+      "https://hjtrending.blog/privacy-policy.html",
+      "https://hjtrending.blog/sports.html",
+      "https://hjtrending.blog/terms-of-service.html",
+      "https://hjtrending.blog/trending.html",
+      "https://hjtrending.blog/posts/2009-interview-clip-viral-explained.html",
+      "https://hjtrending.blog/posts/50m-views-viral-video-psychology-2026.html",
+      "https://hjtrending.blog/posts/ai-generated-image-fooled-everyone-real.html",
+      "https://hjtrending.blog/posts/esports-bigger-than-nfl-viewership-2026.html",
+      "https://hjtrending.blog/posts/playstation-6-full-specs-price-launch-games.html",
+      "https://hjtrending.blog/posts/tweet-destroyed-billion-dollar-brand-48-hours.html",
+      "https://hjtrending.blog/posts/viral-airport-trick-tested.html",
+      "https://hjtrending.blog/posts/champions-league-semi-final-draw-2026.html",
+      "https://hjtrending.blog/"
+    ],
+    "missingPages": [
+      "https://hjtrending.blog/posts/australian-open-2026-winner-analysis.html",
+      "https://hjtrending.blog/posts/avengers-secret-wars-director-confirms-fan-theory.html",
+      "https://hjtrending.blog/posts/best-games-waiting-gta6.html",
+      "https://hjtrending.blog/posts/best-movies-shows-2026-complete-streaming-guide.html",
+      "https://hjtrending.blog/posts/biggest-boxing-fight-2026-confirmed.html",
+      "https://hjtrending.blog/posts/cultural-moments-february-2026.html",
+      "https://hjtrending.blog/posts/dark-horses-world-cup-2026.html",
+      "https://hjtrending.blog/posts/f1-2026-grid-whos-driving-where.html",
+      "https://hjtrending.blog/posts/fifa-world-cup-2026-complete-guide.html",
+      "https://hjtrending.blog/posts/full-group-stage-draw-who-faces-who.html",
+      "https://hjtrending.blog/posts/greatest-world-cup-goals-ranked.html",
+      "https://hjtrending.blog/posts/gta6-map-bigger-than-gta5.html",
+      "https://hjtrending.blog/posts/icc-champions-trophy-2026-results.html",
+      "https://hjtrending.blog/posts/kendrick-lamar-super-bowl-halftime-show-greatest-ever.html",
+      "https://hjtrending.blog/posts/mbappe-deal-chaos.html",
+      "https://hjtrending.blog/posts/messi-2026-world-cup-confirmed.html",
+      "https://hjtrending.blog/posts/movies-streaming-march-2026.html",
+      "https://hjtrending.blog/posts/nba-mvp-race-2026.html",
+      "https://hjtrending.blog/posts/netflix-show-broke-record.html",
+      "https://hjtrending.blog/posts/premier-league-title-race-2026-scenarios.html",
+      "https://hjtrending.blog/posts/ronaldo-farewell-season-most-watched.html",
+      "https://hjtrending.blog/posts/ronaldo-last-world-cup-2026.html",
+      "https://hjtrending.blog/posts/spider-man-4-complete-cast-plot-confirmed.html",
+      "https://hjtrending.blog/posts/tweet-brought-down-brand.html"
+    ]
+  },
+  "robots": {
+    "exists": false,
+    "content": "",
+    "hasSitemap": false,
+    "blocksAll": false,
+    "blocksPosts": false
+  }
+}

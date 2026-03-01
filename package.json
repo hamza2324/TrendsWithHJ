@@ -4,7 +4,8 @@
   "private": true,
   "description": "Static markdown-to-html build pipeline for HJ Trending",
   "scripts": {
-    "build": "node scripts/build.js"
+    "seo:fix": "node scripts/seo-fix.js",
+    "build": "node scripts/build.js && node scripts/seo-fix.js"
   },
   "engines": {
     "node": ">=20"
