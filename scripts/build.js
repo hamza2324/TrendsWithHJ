@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 "use strict";
 
 const fs = require("fs");
@@ -11,7 +11,7 @@ const ROOT = process.cwd();
 const POSTS_DIR = path.join(ROOT, "posts");
 const CONTENT_DIR = path.join(ROOT, "content");
 const TEMPLATE_PATH = path.join(ROOT, "blog-post.html");
-const SITE_URL = (process.env.SITE_URL || "https://hjtrending.com").replace(/\/+$/, "");
+const SITE_URL = (process.env.SITE_URL || "https://hjtrending.blog").replace(/\/+$/, "");
 const HOME_LATEST_LIMIT = Number(process.env.HOME_LATEST_LIMIT || 6);
 const CATEGORY_LIMIT = Number(process.env.CATEGORY_LIMIT || 12);
 const BLOG_LIMIT = Number(process.env.BLOG_LIMIT || 18);
@@ -763,3 +763,4 @@ function toAbsoluteUrl(input) {
   }
   return `${SITE_URL}/${input}`;
 }
+

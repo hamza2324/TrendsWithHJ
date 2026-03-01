@@ -1,4 +1,4 @@
-name: Build and Deploy
+﻿name: Build and Deploy
 
 on:
   push:
@@ -43,7 +43,7 @@ jobs:
 
       - name: Run build
         env:
-          SITE_URL: https://hjtrending.com
+          SITE_URL: https://hjtrending.blog
           HOME_LATEST_LIMIT: "6"
         run: npm run build
 
@@ -100,3 +100,4 @@ jobs:
         run: |
           echo "Markdown build workflow completed successfully"
           echo "All generated files are up to date"
+
