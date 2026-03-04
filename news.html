@@ -1,188 +1,130 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>News Updates  Breaking Stories, Analysis &amp; Daily Coverage | HJ Trending</title>
-  <meta name="description" content="Latest breaking news, major headlines and fast analysis across sports, gaming, entertainment and trending moments.">
-  <meta property="og:title" content="News Updates  Breaking Stories, Analysis &amp; Daily Coverage">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://hjtrending.blog/news.html">
-  <link rel="stylesheet" href="styles.css">
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8RM3JPKY8L"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8RM3JPKY8L');
-  </script>
-  <meta property="og:description" content="Latest breaking news, major headlines and fast analysis across sports, gaming, entertainment and trending moments.">
-  <meta property="og:url" content="https://hjtrending.blog/news.html">
-  <meta property="og:image" content="https://hjtrending.blog/images/web-logo.jpeg">
-  <meta property="og:site_name" content="HJ Trending">
-  <meta name="twitter:title" content="News Updates  Breaking Stories, Analysis &amp; Daily Coverage">
-  <meta name="twitter:description" content="Latest breaking news, major headlines and fast analysis across sports, gaming, entertainment and trending moments.">
-  <meta name="twitter:image" content="https://hjtrending.blog/images/web-logo.jpeg">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"News Updates  Breaking Stories, Analysis & Daily Coverage","description":"Latest breaking news, major headlines and fast analysis across sports, gaming, entertainment and trending moments.","url":"https://hjtrending.blog/news.html","isPartOf":{"@type":"WebSite","name":"HJ Trending","url":"https://hjtrending.blog/"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hjtrending.blog/"},{"@type":"ListItem","position":2,"name":"News Updates  Breaking Stories, Analysis & Daily Coverage","item":"https://hjtrending.blog/news.html"}]}</script>
-  
-  
-  
-<link rel="icon" type="image/jpeg" href="images/web-logo.jpeg"><link rel="shortcut icon" type="image/jpeg" href="images/web-logo.jpeg"><link rel="apple-touch-icon" href="images/web-logo.jpeg"></head>
-<body>
-  <div class="ticker" aria-label="Breaking news">
-    <div class="ticker__label"> LIVE <span class="ticker__dot"></span></div>
-    <div class="ticker__track">
-      <div class="ticker__item">Global headlines updated around the clock on HJ Trending</div>
-      <div class="ticker__item">Breaking updates from sports, gaming and entertainment</div>
-      <div class="ticker__item">Fast explainers on stories everyone is talking about</div>
-      <div class="ticker__item">Latest stories ranked by impact, reach and relevance</div>
-      <div class="ticker__item">Global headlines updated around the clock on HJ Trending</div>
-      <div class="ticker__item">Breaking updates from sports, gaming and entertainment</div>
-      <div class="ticker__item">Fast explainers on stories everyone is talking about</div>
-      <div class="ticker__item">Latest stories ranked by impact, reach and relevance</div>
-    </div>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>News | HJ Trending</title>
+<meta name="description" content="Latest news updates, headlines and explainers from HJ Trending.">
+<meta property="og:title" content="News | HJ Trending">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hjtrending.blog/news.html">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .news-hero { background: linear-gradient(135deg, #0a0a0a 0%, #1a0000 50%, #0a0a0a 100%); border-bottom: 4px solid var(--red); }
+  .news-hero .cat-hero__name { color: var(--red); }
+  .news-stat-bar { background: var(--black); border-bottom: 2px solid var(--black); }
+  .news-stat-bar__inner { max-width: var(--max-w); margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(4,1fr); border-left: 1px solid #1e1e1e; }
+  .news-stat { padding: 20px; border-right: 1px solid #1e1e1e; text-align: center; }
+  .news-stat__num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--red); line-height: 1; }
+  .news-stat__label { font-family: 'Space Mono', monospace; font-size: 10px; color: #555; text-transform: uppercase; letter-spacing: .1em; margin-top: 4px; }
+  .news-empty { border: 1px dashed #2a2a2a; padding: 24px; border-radius: 4px; background: #0f0f0f; color: #cfcfcf; }
+  .news-empty__title { font-family: 'Bebas Neue', sans-serif; font-size: 34px; letter-spacing: .04em; color: var(--white); margin-bottom: 8px; }
+  .news-empty__sub { color: #9e9e9e; font-size: 14px; }
+  @media(max-width:768px) { .news-stat-bar__inner { grid-template-columns: 1fr 1fr; } .news-stat__num { font-size: 36px; } }
+</style>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8RM3JPKY8L"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8RM3JPKY8L');
+</script><meta property="og:description" content="Latest news updates, headlines and explainers from HJ Trending."><meta property="og:url" content="https://hjtrending.blog/news.html"><meta property="og:image" content="https://hjtrending.blog/images/web-logo.jpeg"><meta property="og:site_name" content="HJ Trending"><meta name="twitter:title" content="News | HJ Trending"><meta name="twitter:description" content="Latest news updates, headlines and explainers from HJ Trending."><meta name="twitter:image" content="https://hjtrending.blog/images/web-logo.jpeg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"News | HJ Trending","description":"Latest news updates, headlines and explainers from HJ Trending.","url":"https://hjtrending.blog/news.html","isPartOf":{"@type":"WebSite","name":"HJ Trending","url":"https://hjtrending.blog/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hjtrending.blog/"},{"@type":"ListItem","position":2,"name":"News","item":"https://hjtrending.blog/news.html"}]}</script><link rel="icon" type="image/jpeg" href="images/web-logo.jpeg"><link rel="shortcut icon" type="image/jpeg" href="images/web-logo.jpeg"><link rel="apple-touch-icon" href="images/web-logo.jpeg"></head><body><div class="ticker">
+  <div class="ticker__label"> LIVE <span class="ticker__dot"></span></div>
+  <div class="ticker__track">
+    <div class="ticker__item">HJ Trending News Desk is ready for fresh updates</div>
+    <div class="ticker__item">Breaking stories will appear here as soon as published</div>
+    <div class="ticker__item">Headlines, explainers and viral moments in one place</div>
+    <div class="ticker__item">HJ Trending News Desk is ready for fresh updates</div>
+    <div class="ticker__item">Breaking stories will appear here as soon as published</div>
+    <div class="ticker__item">Headlines, explainers and viral moments in one place</div>
   </div>
+</div>
 
-  <div class="nav-wrap">
-    <nav class="nav" aria-label="Main navigation">
-      <a href="index.html" class="nav__logo">HJ<span></span>TRENDING</a>
-      <ul class="nav__links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="fifa2026.html">FIFA 2026 <span class="live-badge">LIVE</span></a></li>
-        <li><a href="sports.html">Sports</a></li>
-        <li><a href="news.html" class="active">News</a></li>
-        <li><a href="entertainment.html">Entertainment</a></li>
-        <li><a href="trending.html">Trending</a></li>
-        <li><a href="gaming.html">Gaming</a></li>
-      </ul>
-      <div class="nav__right">
-        <button class="nav__search-btn" id="searchBtn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></button>
-        <button class="btn-sub" onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'})">Subscribe</button>
-        <button class="nav__burger" id="burgerBtn" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
-      </div>
-    </nav>
-  </div>
-
-  <div class="hbar"><div class="hbar__inner"><span class="hbar__label"> News Desk:</span><a href="sports.html" class="hbar__pill">Sports Headlines</a><a href="gaming.html" class="hbar__pill">Gaming Updates</a><a href="entertainment.html" class="hbar__pill">Entertainment</a><a href="trending.html" class="hbar__pill">Viral Stories</a><a href="blog.html" class="hbar__pill">All Articles</a></div></div>
-
-  <section class="cat-hero" aria-label="News category">
-    <div class="cat-hero__inner">
-      <div>
-        <div class="cat-hero__name" style="color:var(--red)"> NEWS</div>
-        <p class="cat-hero__desc">Your daily front page for the stories that matter most. Breaking updates, quick context, and clear analysis without the fluff.</p>
-      </div>
-      <div class="cat-hero__featured">
-        <article class="card-row">
-          <a href="blog.html" class="card-row__img"><img src="images/hero_image.jpeg" alt="HJ Trending latest news" loading="eager" decoding="async" width="1200" height="675"></a>
-          <div>
-            <div class="card-row__cat" style="color:var(--red)"> Top Story</div>
-            <h2 class="card-row__title"><a href="blog.html" style="color:var(--white)">Live Coverage: The Biggest Stories Across Sports, Gaming and Entertainment</a></h2>
-            <div class="card-row__meta" style="color:#555">HJ Trending  Updated Daily</div>
-          </div>
-        </article>
-      </div>
+<div class="nav-wrap">
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">HJ<span></span>TRENDING</a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="fifa2026.html">FIFA 2026 <span class="live-badge">LIVE</span></a></li>
+      <li><a href="news.html" class="active">News</a></li>
+      <li><a href="about.html" style="font-size:14px;color:var(--grey-500)">About</a></li>
+      <li><a href="contact.html" style="font-size:14px;color:var(--grey-500)">Contact</a></li>
+    </ul>
+    <div class="nav__right">
+      <button class="nav__search-btn" id="searchBtn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></button>
+      <button class="btn-sub" onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'})">Subscribe</button>
+      <button class="nav__burger" id="burgerBtn" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
     </div>
-  </section>
+  </nav>
+</div>
 
-  <div class="main-layout">
-    <main class="feed"><h1 class="sr-only-seo">News Updates  Breaking Stories, Analysis &amp; Daily Coverage</h1>
-      <div class="sec-label"> Latest News</div>
-      <div class="card-grid">
-        <article class="card">
-          <a href="posts/tweet-brought-down-brand.html" class="card__img"><img src="images/tweet_brought.jpeg" alt="The Tweet That Brought Down a Billion-Dollar Brand" loading="eager" decoding="async" width="1200" height="675"></a>
-          <div class="card__body">
-            <div class="card__cat cat-trending"> News</div>
-            <h2 class="card__title"><a href="posts/tweet-brought-down-brand.html">The Tweet That Brought Down a Billion-Dollar Brand</a></h2>
-            <p class="card__excerpt">Full timeline, business fallout, and how one viral post changed a global brand overnight.</p>
-            <div class="card__meta"><span>Hamza Jadoon</span><span>Feb 25, 2026</span><span>4 min read</span></div>
-          </div>
-        </article>
-        <article class="card">
-          <a href="posts/netflix-show-broke-record.html" class="card__img"><img src="images/netflix_record.jpeg" alt="Netflix show broke all-time records" loading="lazy" decoding="async" width="1200" height="675"></a>
-          <div class="card__body">
-            <div class="card__cat cat-trending"> News</div>
-            <h2 class="card__title"><a href="posts/netflix-show-broke-record.html">This Netflix Show Just Broke the All-Time Record</a></h2>
-            <p class="card__excerpt">What the new numbers mean for streaming, audience behavior, and upcoming platform strategy.</p>
-            <div class="card__meta"><span>Hamza Jadoon</span><span>Feb 26, 2026</span><span>7 min read</span></div>
-          </div>
-        </article>
-        <article class="card">
-          <a href="posts/champions-league-semi-final-draw-2026.html" class="card__img"><img src="images/ucl-semifinal-2026.jpeg" alt="Champions League Semi-Final Draw 2026" loading="lazy" decoding="async" width="1200" height="675"></a>
-          <div class="card__body">
-            <div class="card__cat cat-trending"> News</div>
-            <h2 class="card__title"><a href="posts/champions-league-semi-final-draw-2026.html">Champions League Semi-Final Draw 2026: Full Fixtures</a></h2>
-            <p class="card__excerpt">All confirmed matchups, dates, and the realistic pathways to this season's final.</p>
-            <div class="card__meta"><span>Hamza Jadoon</span><span>Feb 28, 2026</span><span>9 min read</span></div>
-          </div>
-        </article>
-      </div>
+<div class="hbar" style="background:var(--red)"><div class="hbar__inner"><span class="hbar__label" style="color:var(--white)"> NEWS:</span><span class="hbar__pill">Breaking</span><span class="hbar__pill">Viral</span><span class="hbar__pill">World</span><span class="hbar__pill">Sports</span><span class="hbar__pill">Explainers</span></div></div>
 
-      <div class="card-wide">
-        <a href="blog.html" class="card-wide__img"><img src="images/hero_image.jpeg" alt="News and analysis" loading="lazy" decoding="async" width="1200" height="675"></a>
-        <div class="card-wide__body">
-          <span class="card-wide__badge"> Editor Pick</span>
-          <h2 class="card-wide__title"><a href="blog.html">Follow Every Major Story in One Place</a></h2>
-          <p class="card-wide__excerpt">From breaking sports headlines to entertainment reveals and online viral moments, this is your fast daily snapshot.</p>
-          <div class="card-wide__meta">HJ Trending  Daily Updates</div>
+<section class="cat-hero news-hero">
+  <div class="cat-hero__inner">
+    <div>
+      <div class="cat-hero__name">NEWS<br>DESK<br>LIVE</div>
+      <p class="cat-hero__desc">This page is now a clean News page. Add your latest stories here anytime. No old feed is loaded now.</p>
+    </div>
+    <div class="cat-hero__featured">
+      <article class="card-row">
+        <div>
+          <div class="card-row__cat" style="color:var(--red)"> Ready</div>
+          <h2 class="card-row__title"><span style="color:var(--white)">No news articles published yet</span></h2>
+          <div class="card-row__meta" style="color:#777">Add your first post when ready</div>
         </div>
-      </div>
-
-      <div class="sec-label">More News</div>
-      <div class="card-list" id="moreStories">
-        <article class="card-row">
-          <div>
-            <div class="card-row__cat cat-trending">Update</div>
-            <h3 class="card-row__title">More news stories will be added here as coverage expands.</h3>
-            <div class="card-row__meta">Use this page as your central news category.</div>
-          </div>
-        </article>
-      </div>
-    </main>
-
-    <aside class="sidebar">
-      <div class="widget">
-        <div class="widget__title">Most Read  News</div>
-        <div class="trend-item"><span class="trend-num">1</span><div><div class="trend-cat">Breaking</div><a href="blog.html" class="trend-title">Today's biggest headlines, all in one feed</a><div class="trend-meta">Updated live</div></div></div>
-        <div class="trend-item"><span class="trend-num">2</span><div><div class="trend-cat">Sports</div><a href="sports.html" class="trend-title">Latest sports stories and results</a><div class="trend-meta">Live updates</div></div></div>
-        <div class="trend-item"><span class="trend-num">3</span><div><div class="trend-cat">Entertainment</div><a href="entertainment.html" class="trend-title">New movie, TV and music headlines</a><div class="trend-meta">Daily coverage</div></div></div>
-      </div>
-      <div class="widget" id="newsletter">
-        <div class="newsletter-widget">
-          <div class="newsletter-widget__title">News <span>Daily</span></div>
-          <p class="newsletter-widget__sub">A fast daily roundup of the headlines that actually matter.</p>
-          <div class="nl-form"><input type="email" placeholder="your@email.com" aria-label="Email"><button>Get Daily News </button></div>
-          <p class="privacy">No spam. Unsubscribe anytime.</p>
-        </div>
-      </div>
-
-      <div class="widget"><div class="widget__title">News Topics</div><div class="tags"><a href="sports.html" class="tag">Sports</a><a href="gaming.html" class="tag">Gaming</a><a href="entertainment.html" class="tag">Entertainment</a><a href="trending.html" class="tag">Trending</a><a href="blog.html" class="tag">Breaking</a><a href="blog.html" class="tag">Analysis</a><a href="blog.html" class="tag">Headlines</a></div></div>
-    </aside>
+      </article>
+    </div>
   </div>
+</section>
 
-  <section class="dark-band">
-    <div class="dark-band__inner">
-      <span class="dark-band__label">More From HJ Trending</span>
-      <article class="band-card"><a href="sports.html" class="band-card__img"><img src="images/ucl-semifinal-2026.jpeg" alt="Sports updates" loading="lazy" decoding="async" width="1200" height="675"></a><div class="band-card__cat"> Sports</div><h3 class="band-card__title"><a href="sports.html">Sports News and Live Results</a></h3><div class="band-card__meta">Updated daily</div></article>
-      <article class="band-card"><a href="gaming.html" class="band-card__img"><img src="images/gta6-map-size.jpg" alt="Gaming updates" loading="lazy" decoding="async" width="1200" height="675"></a><div class="band-card__cat"> Gaming</div><h3 class="band-card__title"><a href="gaming.html">Gaming Headlines and New Releases</a></h3><div class="band-card__meta">Updated daily</div></article>
-      <article class="band-card"><a href="entertainment.html" class="band-card__img"><img src="images/web-avengers-secret-wars.png" alt="Entertainment updates" loading="lazy" decoding="async" width="1200" height="675"></a><div class="band-card__cat"> Entertainment</div><h3 class="band-card__title"><a href="entertainment.html">Entertainment News and Pop Culture</a></h3><div class="band-card__meta">Updated daily</div></article>
-      <article class="band-card"><a href="trending.html" class="band-card__img"><img src="images/viral-video-50m.jpeg" alt="Trending updates" loading="lazy" decoding="async" width="1200" height="675"></a><div class="band-card__cat"> Trending</div><h3 class="band-card__title"><a href="trending.html">What's Blowing Up Right Now</a></h3><div class="band-card__meta">Updated daily</div></article>
+<div class="news-stat-bar">
+  <div class="news-stat-bar__inner">
+    <div class="news-stat"><div class="news-stat__num">0</div><div class="news-stat__label">Published Today</div></div>
+    <div class="news-stat"><div class="news-stat__num">0</div><div class="news-stat__label">Breaking Stories</div></div>
+    <div class="news-stat"><div class="news-stat__num">0</div><div class="news-stat__label">Featured Reports</div></div>
+    <div class="news-stat"><div class="news-stat__num">0</div><div class="news-stat__label">Live Threads</div></div>
+  </div>
+</div>
+
+<div class="main-layout">
+  <main class="feed"><h1 class="sr-only-seo">News | HJ Trending</h1>
+    <div class="sec-label"> Latest News</div>
+    <div class="news-empty">
+      <div class="news-empty__title">No Stories Yet</div>
+      <p class="news-empty__sub">This section is intentionally empty so you can add your own news content.</p>
     </div>
-  </section>
+  </main>
 
-  <footer>
-    <div class="footer-top">
-      <div><div class="footer-logo">HJ<span></span>TRENDING</div><p class="footer-desc">Daily coverage of sports, gaming, entertainment and what the world is talking about.</p><div class="footer-social"><a href="https://www.facebook.com/profile.php?id=61588027225877" class="social-btn" target="_blank">f</a><a href="https://www.instagram.com/hj_automations/" class="social-btn" target="_blank">IG</a><a href="https://www.youtube.com/@HJTRENDS" class="social-btn" target="_blank">YT</a><a href="https://www.tiktok.com/@hj_automations" class="social-btn" target="_blank">TK</a><a href="https://www.linkedin.com/company/111718821" class="social-btn" target="_blank">in</a></div></div>
-      <div class="footer-col"><div class="footer-col__title">Categories</div><ul><li><a href="fifa2026.html"> FIFA 2026</a></li><li><a href="sports.html"> Sports</a></li><li><a href="news.html"> News</a></li><li><a href="gaming.html"> Gaming</a></li><li><a href="entertainment.html"> Entertainment</a></li><li><a href="trending.html"> Trending</a></li></ul></div>
-      <div class="footer-col"><div class="footer-col__title">Company</div><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="advertise.html">Advertise</a></li><li><a href="guest-post.html">Write For Us</a></li></ul></div>
-      <div class="footer-col"><div class="footer-col__title">Legal</div><ul><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-of-service.html">Terms of Service</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul></div>
+  <aside class="sidebar">
+    <div class="widget">
+      <div class="widget__title">Most Read  News</div>
+      <div class="news-empty">
+        <p class="news-empty__sub">No entries yet.</p>
+      </div>
     </div>
-    <div class="footer-bottom"><p> 2026 HJ Trending. All rights reserved.</p><p>Built by <a href="https://hamzajadoon.cloud">Hamza Jadoon</a></p></div>
-  </footer>
-  <button class="back-top" id="backTop" aria-label="Back to top"></button>
-  <div class="search-overlay" id="searchOverlay" role="dialog"><div class="search-box"><div class="search-input-wrap"><input type="text" id="searchInput" placeholder="Search stories..."><button class="search-close" id="searchClose"></button></div><p class="search-hint">Press ESC to close</p></div></div>
-  <div class="mobile-menu" id="mobileMenu" role="dialog"><div class="mobile-menu__header"><span class="mobile-menu__logo">HJ<span></span>TRENDING</span><button class="mobile-menu__close" id="mobileClose"></button></div><a href="index.html">Home</a><a href="fifa2026.html">FIFA 2026 </a><a href="sports.html">Sports</a><a href="news.html">News</a><a href="entertainment.html">Entertainment</a><a href="trending.html">Trending</a><a href="gaming.html">Gaming</a></div>
-  <script src="main.js"></script>
+    <div class="widget" id="newsletter">
+      <div class="newsletter-widget">
+        <div class="newsletter-widget__title">News <span>Updates</span></div>
+        <p class="newsletter-widget__sub">Daily headlines and key updates in one quick email.</p>
+        <div class="nl-form"><input type="email" placeholder="your@email.com" aria-label="Email"><button>Get Updates </button></div>
+        <p class="privacy">No spam. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </aside>
+</div>
 
+<footer>
+  <div class="footer-top">
+    <div><div class="footer-logo">HJ<span></span>TRENDING</div><p class="footer-desc">Daily coverage of sports, gaming, entertainment and what the world is talking about.</p><div class="footer-social"><a href="https://www.facebook.com/profile.php?id=61588027225877" class="social-btn" target="_blank">f</a><a href="https://www.instagram.com/hj_automations/" class="social-btn" target="_blank">IG</a><a href="https://www.youtube.com/@HJTRENDS" class="social-btn" target="_blank">YT</a><a href="https://www.tiktok.com/@hj_automations" class="social-btn" target="_blank">TK</a><a href="https://www.linkedin.com/company/111718821" class="social-btn" target="_blank">in</a></div></div>
+    <div class="footer-col"><div class="footer-col__title">Categories</div><ul><li><a href="fifa2026.html"> FIFA 2026</a></li><li><a href="news.html"> News</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col__title">Company</div><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="advertise.html">Advertise</a></li><li><a href="guest-post.html">Write For Us</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col__title">Legal</div><ul><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-of-service.html">Terms of Service</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p> 2026 HJ Trending. All rights reserved.</p><p>Built by <a href="https://hamzajadoon.cloud">Hamza Jadoon</a></p></div>
+</footer>
+<button class="back-top" id="backTop" aria-label="Back to top"></button>
+<div class="search-overlay" id="searchOverlay" role="dialog"><div class="search-box"><div class="search-input-wrap"><input type="text" id="searchInput" placeholder="Search stories..."><button class="search-close" id="searchClose"></button></div><p class="search-hint">Press ESC to close</p></div></div>
+<div class="mobile-menu" id="mobileMenu" role="dialog"><div class="mobile-menu__header"><span class="mobile-menu__logo">HJ<span></span>TRENDING</span><button class="mobile-menu__close" id="mobileClose"></button></div><a href="index.html">Home</a><a href="fifa2026.html">FIFA 2026 </a><a href="news.html">News</a><a href="about.html" style="margin-top: 16px; font-size: 20px; color: var(--grey-500)">About</a><a href="contact.html" style="font-size: 20px; color: var(--grey-500)">Contact</a></div>
+<script src="main.js"></script>
 
 </body></html>
