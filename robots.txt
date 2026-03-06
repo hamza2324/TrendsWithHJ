@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
 
-Disallow: /node_modules/
-Disallow: /scripts/
-Disallow: /.github/
-
 Sitemap: https://hjtrending.blog/sitemap.xml

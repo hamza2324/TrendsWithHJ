@@ -41,7 +41,13 @@ function main() {
     throw new Error("Missing required template file: blog-post.html");
   }
 
-  posts.forEach((post) => buildPostPage(post, posts, template));
+  posts.forEach((post) => {
+    if (post.sourceFormat === "html") {
+      buildStandaloneHtmlPage(post);
+      return;
+    }
+    buildPostPage(post, posts, template);
+  });
 
   updateIndexPage(posts);
   updateBlogPage(posts);
@@ -61,6 +67,9 @@ function loadPosts() {
       .filter((f) => isPublishableMarkdown(f))
       .map((filePath) => ({ filePath, source }));
   });
+  const standaloneHtmlFiles = walkFiles(CONTENT_DIR)
+    .filter((f) => isStandaloneHtmlPost(f))
+    .map((filePath) => ({ filePath, source: { dir: CONTENT_DIR, sourceType: "content" } }));
 
   const all = markdownFiles.map(({ filePath, source }) => {
     const raw = fs.readFileSync(filePath, "utf8");
@@ -107,12 +116,66 @@ function loadPosts() {
       contentHtml: htmlContent,
       readingMinutes,
       excerpt: buildExcerpt(parsed.content || description, 160),
-      url: `${SITE_URL}/posts/${slug}.html`
+      url: `${SITE_URL}/posts/${slug}.html`,
+      sourceFormat: "markdown"
     };
   });
 
-  all.sort((a, b) => b.date - a.date || a.slug.localeCompare(b.slug));
-  return dedupeBySlug(all);
+  const htmlPosts = standaloneHtmlFiles.map(({ filePath, source }) => {
+    const raw = fs.readFileSync(filePath, "utf8");
+    const $ = cheerio.load(raw, { decodeEntities: false });
+    const stat = fs.statSync(filePath);
+    const relPath = path.relative(source.dir, filePath).replace(/\\/g, "/");
+    const slug = slugify(path.basename(filePath, ".html"));
+    const inferredCategory = inferCategoryFromPath(relPath);
+    const categoryKey = normalizeCategory(inferredCategory || "news");
+    const category = CATEGORY_MAP[categoryKey] || CATEGORY_MAP.news;
+    const date =
+      parseDate($('meta[property="article:published_time"]').attr("content")) ||
+      parseDate(extractDateFromJsonLd($)) ||
+      stat.mtime;
+    const title =
+      String($('meta[property="og:title"]').attr("content") || $("title").first().text() || slug.replace(/-/g, " "));
+    const description = String(
+      $('meta[name="description"]').attr("content") ||
+      $('meta[property="og:description"]').attr("content") ||
+      buildExcerpt($("body").text(), 155)
+    );
+    const thumbnail = normalizeHtmlThumbnail(
+      $('meta[property="og:image"]').attr("content") || $('meta[name="twitter:image"]').attr("content") || ""
+    );
+    const author = String($('meta[name="author"]').attr("content") || "HJ Trending");
+    const tags = String($('meta[name="keywords"]').attr("content") || "")
+      .split(",")
+      .map((t) => t.trim())
+      .filter(Boolean);
+    const bodyText = $("body").text() || description;
+
+    return {
+      slug,
+      sourcePath: filePath,
+      sourceType: source.sourceType,
+      outputPath: path.join(POSTS_DIR, `${slug}.html`),
+      title,
+      date,
+      isoDate: toISODate(date),
+      humanDate: toHumanDate(date),
+      category,
+      description,
+      thumbnail,
+      author,
+      tags,
+      contentHtml: "",
+      readingMinutes: estimateReadMinutes(bodyText),
+      excerpt: buildExcerpt(description, 160),
+      url: `${SITE_URL}/posts/${slug}.html`,
+      sourceFormat: "html"
+    };
+  });
+
+  const posts = [...all, ...htmlPosts];
+  posts.sort((a, b) => b.date - a.date || a.slug.localeCompare(b.slug));
+  return dedupeBySlug(posts);
 }
 
 function buildPostPage(post, allPosts, templateHtml) {
@@ -185,6 +248,15 @@ function buildPostPage(post, allPosts, templateHtml) {
 
   const out = $.html();
   fs.writeFileSync(post.outputPath, out, "utf8");
+}
+
+function buildStandaloneHtmlPage(post) {
+  const $ = cheerio.load(fs.readFileSync(post.sourcePath, "utf8"), { decodeEntities: false });
+  ensureFavicon($, "../images/web-logo.jpeg");
+  ensureAnalytics($);
+  rewriteRootRelativeLinksForPost($);
+  rewriteMediaLinksForPost($);
+  fs.writeFileSync(post.outputPath, $.html(), "utf8");
 }
 
 function updateIndexPage(posts) {
@@ -586,6 +658,29 @@ function rewriteRootRelativeLinksForPost($) {
   });
 }
 
+function rewriteMediaLinksForPost($) {
+  $("img[src]").each((_, el) => {
+    const value = $(el).attr("src");
+    if (!value) {
+      return;
+    }
+    if (
+      value.startsWith("http://") ||
+      value.startsWith("https://") ||
+      value.startsWith("//") ||
+      value.startsWith("data:") ||
+      value.startsWith("../")
+    ) {
+      return;
+    }
+    if (value.startsWith("/")) {
+      $(el).attr("src", `..${value}`);
+      return;
+    }
+    $(el).attr("src", `../${value}`);
+  });
+}
+
 function upsertGeneratedCards($, container, htmlItems) {
   container.children('[data-generated="md"]').remove();
   for (let i = htmlItems.length - 1; i >= 0; i -= 1) {
@@ -751,6 +846,23 @@ function isPublishableMarkdown(filePath) {
   return true;
 }
 
+function isStandaloneHtmlPost(filePath) {
+  if (!filePath.toLowerCase().endsWith(".html")) {
+    return false;
+  }
+  const name = path.basename(filePath).toLowerCase();
+  if (name === "readme.html" || name.startsWith("_")) {
+    return false;
+  }
+  const siblingMd = filePath.replace(/\.html$/i, ".md");
+  const siblingMdTxt = `${siblingMd}.txt`;
+  if (fs.existsSync(siblingMd) || fs.existsSync(siblingMdTxt)) {
+    return false;
+  }
+  const raw = fs.readFileSync(filePath, "utf8");
+  return /<meta\s+name=["']hj:publish["']\s+content=["']true["']\s*\/?>/i.test(raw);
+}
+
 function dedupeBySlug(posts) {
   const seen = new Set();
   const out = [];
@@ -777,7 +889,12 @@ function ensureDir(dir) {
 }
 
 function stripHtml(input) {
-  return String(input || "").replace(/<[^>]*>/g, " ");
+  return String(input || "")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function readFileSafe(file) {
@@ -818,5 +935,36 @@ function toAbsoluteUrl(input) {
     return `${SITE_URL}${input}`;
   }
   return `${SITE_URL}/${input}`;
+}
+
+function extractDateFromJsonLd($) {
+  const scripts = $('script[type="application/ld+json"]').toArray();
+  for (const script of scripts) {
+    try {
+      const parsed = JSON.parse($(script).text());
+      const items = Array.isArray(parsed) ? parsed : [parsed];
+      for (const item of items) {
+        if (item && typeof item === "object" && item.datePublished) {
+          return item.datePublished;
+        }
+      }
+    } catch (_err) {
+      continue;
+    }
+  }
+  return "";
+}
+
+function normalizeHtmlThumbnail(value) {
+  if (!value) {
+    return "";
+  }
+  if (value.startsWith(`${SITE_URL}/`)) {
+    return value.slice(SITE_URL.length + 1);
+  }
+  if (value.startsWith("/")) {
+    return value.slice(1);
+  }
+  return value;
 }
 
